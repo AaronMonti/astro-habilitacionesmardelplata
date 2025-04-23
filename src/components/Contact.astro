@@ -1,0 +1,139 @@
+<section>
+   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div
+         class="space-y-1 flex flex-col items-center mb-15"
+         data-aos="fade-down"
+         data-aos-duration="1000"
+      >
+         <h1 class="text-3xl font-semibold text-[#2A5C8B]">Contacto</h1>
+         <div class="w-12 h-1 bg-[#2A5C8B] rounded-full"></div>
+      </div>
+      <div class="grid lg:grid-cols-2 grid-cols-1 gap-0 md:gap-5">
+         <div class="lg:mb-0 mb-10" data-aos="fade-right" data-aos-duration="1000">
+            <div class="group w-full h-full">
+               <div class="relative h-full">
+                  <img
+                     src="/src/assets/bg-3.avif"
+                     alt="ContactUs tailwind section"
+                     class="w-full h-full lg:rounded-l-sm rounded-sm bg-blend-multiply bg-indigo-700 object-cover"
+                  />
+                  <div class="absolute bottom-0 w-full lg:p-11 p-5">
+                     <div class="bg-white rounded-sm p-6 block">
+                        <a href="tel:+542235322443" class="flex items-center mb-6 group transition-all duration-300 hover:translate-x-2">
+                           <i class="fa-solid fa-phone text-[#2A5C8B] text-xl group-hover:scale-110 transition-all duration-300" data-aos="zoom-in" data-aos-delay="100"></i>
+                           <div class="flex flex-col">
+                              <h5
+                                 class="text-black text-base font-normal leading-6 ml-5 group-hover:text-[#2A5C8B] transition-all duration-300"
+                              >
+                                 (0223) 15-532-2443
+                              </h5>
+                              <h5
+                                 class="text-black text-base font-normal leading-6 ml-5 group-hover:text-[#2A5C8B] transition-all duration-300"
+                              >
+                                 (0223) 15-564-6847
+                              </h5>
+                           </div>
+                        </a>
+                        <a href="mailto:toledomorenoyasoc@habilitacionesmardelplata.com" class="flex items-center mb-6 group transition-all duration-300 hover:translate-x-2">
+                           <i class="fa-solid fa-envelope text-[#2A5C8B] text-xl group-hover:scale-110 transition-all duration-300" data-aos="zoom-in" data-aos-delay="200"></i>
+                           <h5
+                              class="text-black text-base font-normal leading-6 ml-5 group-hover:text-[#2A5C8B] transition-all duration-300 overflow-auto"
+                           >
+                              toledomorenoyasoc@habilitacionesmardelplata.com
+                           </h5>
+                        </a>
+                        <a href="https://maps.google.com/?q=CORDOBA+1882,+PISO+4,+OFICINA+42,+Mar+del+plata" target="_blank" class="flex items-center group transition-all duration-300 hover:translate-x-2">
+                           <i class="fa-solid fa-location-dot text-[#2A5C8B] text-xl group-hover:scale-110 transition-all duration-300" data-aos="zoom-in" data-aos-delay="300"></i>
+                           <h5
+                              class="text-black text-base font-normal leading-6 ml-5 group-hover:text-[#2A5C8B] transition-all duration-300"
+                           >
+                              CORDOBA 1882, PISO 4, OFICINA 42, Mar del plata.
+                           </h5>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="bg-gray-50 p-5 lg:p-11 lg:rounded-r-2xl rounded-sm" data-aos="fade-left" data-aos-duration="1000">
+            <form id="contactForm" class="contact-form">
+               <input
+                  type="text"
+                  name="name"
+                  class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-sm border border-gray-200 focus:outline-none focus:border-[#2A5C8B] pl-4 mb-10 transition-all duration-300"
+                  placeholder="Nombre"
+                  required
+               />
+               <input
+                  type="email"
+                  name="email"
+                  class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-sm border border-gray-200 focus:outline-none focus:border-[#2A5C8B] pl-4 mb-10 transition-all duration-300"
+                  placeholder="Email"
+                  required
+               />
+               <input
+                  type="tel"
+                  name="phone"
+                  class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-sm border border-gray-200 focus:outline-none focus:border-[#2A5C8B] pl-4 mb-10 transition-all duration-300"
+                  placeholder="Teléfono"
+                  required
+               />
+               <div class="mb-10">
+                  <h4 class="text-gray-500 text-lg font-normal leading-7 mb-4">
+                     Método preferido de comunicación
+                  </h4>
+                  <div class="flex">
+                     <div class="flex items-center mr-11">
+                        <input
+                           id="radio-email"
+                           type="radio"
+                           name="preferred_method"
+                           value="email"
+                           class="hidden checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100"
+                           required
+                        />
+                        <label
+                           for="radio-email"
+                           class="flex items-center cursor-pointer text-gray-500 text-base font-normal leading-6"
+                        >
+                           <span
+                              class="border border-gray-300 rounded-sm mr-2 w-4 h-4 ml-2"
+                           ></span> Email
+                        </label>
+                     </div>
+                     <div class="flex items-center">
+                        <input
+                           id="radio-phone"
+                           type="radio"
+                           name="preferred_method"
+                           value="phone"
+                           class="hidden checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100"
+                        />
+                        <label
+                           for="radio-phone"
+                           class="flex items-center cursor-pointer text-gray-500 text-base font-normal leading-6"
+                        >
+                           <span
+                              class="border border-gray-300 rounded-sm mr-2 w-4 h-4 ml-2"
+                           ></span> Teléfono
+                        </label>
+                     </div>
+                  </div>
+               </div>
+               <textarea
+                  name="message"
+                  class="w-full h-32 text-gray-600 placeholder-gray-400 bg-transparent text-lg shadow-sm font-normal leading-7 rounded-sm border border-gray-200 focus:outline-none focus:border-[#2A5C8B] p-4 mb-10 transition-all duration-300"
+                  placeholder="Mensaje"
+                  required></textarea>
+               <button
+                  type="submit"
+                  class="w-full h-12 text-white text-base font-semibold leading-6 rounded-sm transition-all duration-700 hover:bg-[#2A5C8B] bg-[#2A5C8B]/80 shadow-sm"
+                  >Enviar</button
+               >
+               <div id="formMessage" class="mt-4 text-center hidden"></div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>

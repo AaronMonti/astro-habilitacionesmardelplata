@@ -1,0 +1,104 @@
+---
+import 'aos/dist/aos.css';
+---
+
+<!-- ====== About Section Start -->
+<section
+   class="container mx-auto px-4 my-10 flex flex-col gap-10 md:gap-20 text-white overflow-x-hidden"
+>
+   <div class="flex flex-col gap-8 lg:gap-12">
+      <!-- Encabezado con subrayado decorativo -->
+        <div class="space-y-1 flex flex-col items-center" data-aos="fade-down" data-aos-duration="1000">
+            <h1 class="text-3xl font-semibold text-[#2A5C8B]">
+                Nosotros
+            </h1>
+            <div class="w-12 h-1 bg-[#2A5C8B] rounded-full"></div>
+        </div>
+
+      <!-- Cita destacada con mejor tipografía -->
+      <div class="flex flex-col md:flex-row justify-between gap-8">
+            <blockquote class="space-y-4 max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
+                <h2
+                    class="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-[#6C757D]"
+                >
+                    "Gestionar una Habilitación es algo que no parece difícil.<br class="hidden md:block"/>
+                    <span class="font-bold text-[#2A5C8B]">De hecho, muchos lo intentan.</span>
+                </h2>
+                <p
+                    class="text-2xl md:text-3xl lg:text-4xl font-medium italic text-[#6C757D]"
+                >
+                    Nosotros nos ocupamos, y en eso está la diferencia.<br />
+                    En entender que los trámites empiezan<br class="hidden md:block" />
+                    <span class="font-bold text-[#2A5C8B]">y deben terminar."</span>
+                </p>
+            </blockquote>
+            <div class="w-full md:w-auto" data-aos="fade-left" data-aos-duration="1000">
+                <div class="w-full text-[#FA9B00] flex-col justify-center items-start gap-4 md:gap-6 flex">
+                    <div class="w-full gap-4 md:gap-8 grid md:grid-cols-2 grid-cols-1">
+                        <div
+                            class="w-full p-3.5 rounded-sm border border-[#FA9B00] hover:bg-[#FA9B00]/10 transition-all duration-300 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                            <h4 class="text-xl md:text-2xl font-bold font-manrope leading-9">25+ Años</h4>
+                        </div>
+                        <div
+                            class="w-full p-3.5 rounded-sm border border-[#F4A261] hover:bg-[#F4A261]/10 transition-all duration-300 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                            <h4 class="text-xl md:text-2xl font-bold font-manrope leading-9">1200+ Habilitaciones</h4>
+                        </div>
+                    </div>
+                    <div class="w-full gap-4 md:gap-8 grid md:grid-cols-2 grid-cols-1">
+                        <div
+                            class="w-full p-3.5 rounded-sm border border-[#F4A261] hover:bg-[#F4A261]/10 transition-all duration-300 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                            <h4 class="text-xl md:text-2xl font-bold font-manrope leading-9">200+ Clientes</h4>
+                        </div>
+                        <div
+                            class="w-full p-3.5 rounded-sm border border-[#F4A261] hover:bg-[#F4A261]/10 transition-all duration-300 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                            <h4 class="text-xl md:text-2xl font-bold font-manrope leading-9">+50 rubros habilitados</h4>
+                        </div>
+                    </div>
+                </div>
+          </div>
+      </div>
+      <div class="max-w-7xl mx-auto w-full">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div class="group relative overflow-hidden rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="aspect-w-16 aspect-h-9">
+                    <img 
+                        src="/about01.jpg" 
+                        alt="Imagen sobre nosotros 1" 
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                    />
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                <div class="aspect-w-16 aspect-h-9">
+                    <img 
+                        src="/about02.jpg" 
+                        alt="Imagen sobre nosotros 2" 
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                    />
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                <div class="aspect-w-16 aspect-h-9">
+                    <img 
+                        src="/about02.jpg" 
+                        alt="Imagen sobre nosotros 3" 
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                    />
+                </div>
+            </div>
+        </div>
+      </div>
+   </div>
+</section>
+
+<script>
+  import AOS from 'aos';
+  
+  // Inicializar AOS
+  AOS.init({
+    once: true, // La animación solo ocurre una vez
+    offset: 100, // Offset (en px) desde el punto de activación
+    duration: 1000, // Valores en ms
+    easing: 'ease-in-out',
+  });
+</script>

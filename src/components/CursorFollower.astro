@@ -1,0 +1,67 @@
+<!-- <div
+   id="main-cursor"
+   class="pointer-events-none fixed left-0 top-0 z-[9999] w-2 h-2 bg-white mix-blend-difference rounded-full transition-transform duration-75 -translate-x-1/2 -translate-y-1/2"
+>
+</div>
+
+<div
+   id="cursor-follower"
+   class="pointer-events-none fixed left-0 top-0 z-[9999] w-8 h-8 border-2 bg-white mix-blend-difference rounded-full transition-all duration-200 ease-out -translate-x-1/2 -translate-y-1/2"
+>
+</div>
+
+<script>
+   let mouseX = 0, mouseY = 0;
+   let followerX = 0, followerY = 0;
+   let animationFrame: number;
+
+   const lerpFactor = 0.2;
+   const follower = document.getElementById("cursor-follower");
+   const mainCursor = document.getElementById("main-cursor");
+
+   const lerp = (start: number, end: number, factor: number) => (1 - factor) * start + factor * end;
+
+   const updateCursor = () => {
+      followerX = lerp(followerX, mouseX, lerpFactor);
+      followerY = lerp(followerY, mouseY, lerpFactor);
+
+      follower.style.transform = `translate(${followerX}px, ${followerY}px)`;
+      mainCursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+
+      animationFrame = requestAnimationFrame(updateCursor);
+   };
+
+   document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+   });
+
+   updateCursor();
+
+   // Efecto en enlaces y botones
+   const hoverHandler = {
+      enter: () => mainCursor?.classList.add("border"),
+      leave: () => mainCursor?.classList.remove("border"),
+   };
+
+   document.querySelectorAll("a, button, .cursor-hover").forEach((el) => {
+      el.addEventListener("mouseenter", hoverHandler.enter);
+      el.addEventListener("mouseleave", hoverHandler.leave);
+   });
+
+   // Efecto especial en títulos (agranda el cursor negativo)
+   document.querySelectorAll("h1, h2, h3, h4, p, span, ul, li, button, svg").forEach((el) => {
+      el.addEventListener("mouseenter", () => {
+         follower?.classList.add("w-28", "h-28");
+      });
+      el.addEventListener("mouseleave", () => {
+         follower?.classList.remove("w-28", "h-28");
+      });
+   });
+
+   window.addEventListener("beforeunload", () => {
+      cancelAnimationFrame(animationFrame);
+      document.removeEventListener("mousemove", updateCursor);
+   });
+</script>
+ -->

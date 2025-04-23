@@ -1,0 +1,99 @@
+<section
+   class="w-full h-screen text-white bg-hero bg-cover bg-no-repeat bg-bottom"
+>
+   <div class="absolute inset-0 flex items-center justify-center p-4">
+      <div class="text-center flex flex-col items-center justify-center gap-3 md:gap-5">
+         <svg
+            class="bg-[#2A5C8B] p-3 md:p-4 rounded-full w-16 h-16 md:w-24 md:h-24 lg:w-[100px] lg:h-[100px]"
+            viewBox="0 0 327.339 327.339"
+            fill="#ffffff"
+            xmlns="http://www.w3.org/2000/svg"
+         >
+            <g>
+               <path
+                  d="M197.234,47.994h-67.537c0,95.635-11.786,124.19-24.024,140.687 
+                     c-12.238,16.491,4.531,27.924,4.531,27.924c25.373,15.708,41.429,71.453,44.698,83.691c-3.726,2.763-6.168,7.152-6.168,12.145 
+                     c0,7.419,5.336,13.565,12.368,14.876l-0.076-24.595l-0.016-5.151l-0.261-85.66l-14.191-14.191h33.82l-14.185,14.185l0.261,85.638 
+                     l0.016,5.183l0.076,24.612c7.103-1.256,12.51-7.43,12.51-14.892c0-5.319-2.752-9.981-6.897-12.684 
+                     c9.159-36.447,32.248-69.446,45.927-82.244c14.049-13.146,5.439-24.356,5.439-24.356 
+                     C194.965,147.045,197.234,47.994,197.234,47.994z"
+               ></path>
+               <path
+                  d="M124.35,0v12.689h-8.039c-7.636,0-13.826,6.19-13.826,13.826s6.19,13.826,13.826,13.826h95.124 
+                     c7.636,0,13.826-6.19,13.826-13.826s-6.19-13.826-13.826-13.826H199.48V0H124.35z"
+               ></path>
+            </g>
+         </svg>
+         <h1
+            class="text-white text-3xl md:text-5xl lg:text-6xl font-bold uppercase drop-shadow-[0_5px_5px_rgba(0,0,0,0.4)] text-shadow-lg"
+         >
+            Toledo, Moreno & Asoc.
+         </h1>
+         <p
+            class="text-white text-lg md:text-2xl lg:text-3xl uppercase drop-shadow-[0_4px_4px_rgba(0,0,0,0.35)] text-shadow-md max-w-3xl"
+         >
+            Gestión de habilitaciones de comercios, industrias y cartelería
+         </p>
+         <button class="btn-cta mt-2 md:mt-4">Contactanos</button>
+      </div>
+   </div>
+</section>
+
+<style>
+   .bg-hero {
+      /* OPCION 1 */
+      background: linear-gradient(
+            rgba(209, 215, 219, 0.65),
+            rgba(42, 92, 139, 0.65)
+         ),
+         url("../assets/bg-4.jpg");
+   }
+
+   /* Botón CTA Primario */
+   .btn-cta {
+      background-color: white;
+      color: #F4A261;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   }
+
+   @media (min-width: 768px) {
+      .btn-cta {
+         padding: 12px 30px;
+         font-size: 16px;
+      }
+   }
+
+   /* Botón Secundario */
+   .btn-secondary {
+      background-color: transparent;
+      color: #2a5c8b; /* Azul corporativo */
+      padding: 10px 25px;
+      border: 2px solid #2a5c8b;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+   }
+
+   .btn-secondary:hover {
+      background-color: rgba(42, 92, 139, 0.08); /* Azul con 8% de opacidad */
+      border-color: #1f4566; /* Azul más oscuro para contraste */
+   }
+
+   /* Añadimos efectos de text-shadow para mejor legibilidad */
+   .text-shadow-lg {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   }
+
+   .text-shadow-md {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+   }
+</style>

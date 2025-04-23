@@ -1,0 +1,194 @@
+---
+// Componente: Navbar.astro
+import 'animate.css';
+---
+
+<header id="elnatvar" class="w-full fixed z-50 top-0 text-white animate__animated animate__faster">
+    <nav class="container mx-auto px-4 py-3 m-2">
+        <div class="flex justify-between items-center relative">
+            <!-- Logo -->
+            <a href="/">
+                <svg
+                    class="bg-[#2A5C8B] p-2 rounded-full"
+                    height="50px"
+                    width="50px"
+                    viewBox="0 0 327.339 327.339"
+                    fill="#ffffff"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <g>
+                    <path
+                        d="M197.234,47.994h-67.537c0,95.635-11.786,124.19-24.024,140.687 
+                            c-12.238,16.491,4.531,27.924,4.531,27.924c25.373,15.708,41.429,71.453,44.698,83.691c-3.726,2.763-6.168,7.152-6.168,12.145 
+                            c0,7.419,5.336,13.565,12.368,14.876l-0.076-24.595l-0.016-5.151l-0.261-85.66l-14.191-14.191h33.82l-14.185,14.185l0.261,85.638 
+                            l0.016,5.183l0.076,24.612c7.103-1.256,12.51-7.43,12.51-14.892c0-5.319-2.752-9.981-6.897-12.684 
+                            c9.159-36.447,32.248-69.446,45.927-82.244c14.049-13.146,5.439-24.356,5.439-24.356 
+                            C194.965,147.045,197.234,47.994,197.234,47.994z"
+                    ></path>
+                    <path
+                        d="M124.35,0v12.689h-8.039c-7.636,0-13.826,6.19-13.826,13.826s6.19,13.826,13.826,13.826h95.124 
+                            c7.636,0,13.826-6.19,13.826-13.826s-6.19-13.826-13.826-13.826H199.48V0H124.35z"
+                    ></path>
+                    </g>
+                </svg>
+            </a>
+
+            <!-- Desktop Menu Centrado -->
+            <ul class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center gap-2 px-6 py-2 rounded-sm bg-[#2A5C8B] shadow-md shadow-black/40">
+                <li>
+                    <a href="#inicio" class="nav-link px-4 py-2 text-md font-medium hover:text-[#F4A261] transition-colors">Inicio</a>
+                </li>
+                <li>
+                    <a href="#nosotros" class="nav-link px-4 py-2 text-md font-medium hover:text-[#F4A261] transition-colors">Nosotros</a>
+                </li>
+                <li>
+                    <a href="#clientes" class="nav-link px-4 py-2 text-md font-medium hover:text-[#F4A261] transition-colors">Clientes</a>
+                </li>
+                <li>
+                    <a href="#contacto" class="nav-link px-4 py-2 text-md font-medium hover:text-[#F4A261] transition-colors">Contacto</a>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2 rounded-lg hover:bg-gray-100/10 transition-colors" id="menuButton" aria-label="Menú">
+                <svg class="w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="menuIcon">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden fixed inset-0 bg-[#2A5C8B] z-50 animate__animated">
+                <div class="flex flex-col h-full">
+                    <div class="flex justify-end p-4">
+                        <button id="closeMenu" class="p-2 hover:bg-white/10 rounded-lg transition-colors">
+                            <svg class="w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col items-center justify-center flex-1 gap-8 text-2xl">
+                        <li class="animate__animated">
+                            <a href="#inicio" class="nav-link px-4 py-2 font-medium hover:text-[#F4A261] transition-colors">Inicio</a>
+                        </li>
+                        <li class="animate__animated">
+                            <a href="#nosotros" class="nav-link px-4 py-2 font-medium hover:text-[#F4A261] transition-colors">Nosotros</a>
+                        </li>
+                        <li class="animate__animated">
+                            <a href="#clientes" class="nav-link px-4 py-2 font-medium hover:text-[#F4A261] transition-colors">Clientes</a>
+                        </li>
+                        <li class="animate__animated">
+                            <a href="#contacto" class="nav-link px-4 py-2 font-medium hover:text-[#F4A261] transition-colors">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    // Navbar scroll functionality
+    var prevScrollpos = window.scrollY;
+    window.onscroll = function() {
+        var currentScrollPos = window.scrollY;
+        var navbar = document.getElementById("elnatvar");
+
+        if (prevScrollpos < currentScrollPos) {
+            navbar?.classList.remove("animate__fadeInDown");
+            navbar?.classList.add("animate__fadeOutUp");
+        } else {
+            navbar?.classList.remove("animate__fadeOutUp");
+            navbar?.classList.add("animate__fadeInDown");
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
+    // Mobile menu functionality
+    const menuButton = document.getElementById('menuButton');
+    const closeMenu = document.getElementById('closeMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuItems = mobileMenu?.querySelectorAll('li');
+    const mobileMenuLinks = mobileMenu?.querySelectorAll('a');
+
+    function openMenu() {
+        mobileMenu?.classList.remove('hidden');
+        mobileMenu?.classList.add('animate__fadeInDown');
+        document.body.classList.add('overflow-hidden');
+        
+        // Animar items del menú
+        menuItems?.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add('animate__fadeInRight');
+            }, index * 100);
+        });
+    }
+
+    function closeMenuAnimation() {
+        mobileMenu?.classList.remove('animate__fadeInDown');
+        mobileMenu?.classList.add('animate__fadeOutUp');
+        
+        // Revertir animaciones de items
+        menuItems?.forEach(item => {
+            item.classList.remove('animate__fadeInRight');
+        });
+
+        document.body.classList.remove('overflow-hidden');
+        
+        // Esperar a que termine la animación antes de ocultar
+        setTimeout(() => {
+            mobileMenu?.classList.add('hidden');
+            mobileMenu?.classList.remove('animate__fadeOutUp');
+        }, 500);
+    }
+
+    menuButton?.addEventListener('click', openMenu);
+    closeMenu?.addEventListener('click', closeMenuAnimation);
+
+    // Cerrar menú al hacer clic en un enlace
+    mobileMenuLinks?.forEach(link => {
+        link.addEventListener('click', closeMenuAnimation);
+    });
+</script>
+
+<style is:global>
+.nav-link {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #f39446;
+        transition: all 0.3s ease;
+    }
+    &:hover::after {
+        width: 100%;
+        left: 0;
+    }
+}
+    
+#navbar.hidden {
+    transform: translateY(-100%);
+}
+
+/* Animaciones para el menú móvil */
+.animate__animated {
+    animation-duration: 0.5s;
+}
+
+#mobileMenu.animate__fadeInDown {
+    animation-duration: 0.5s;
+}
+
+#mobileMenu.animate__fadeOutUp {
+    animation-duration: 0.5s;
+}
+
+/* Asegurar que el menú ocupe toda la pantalla incluso durante la animación */
+#mobileMenu {
+    min-height: 100vh;
+    height: 100vh;
+}
+</style>    

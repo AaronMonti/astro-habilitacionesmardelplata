@@ -1,0 +1,151 @@
+---
+import articoLogo from '../assets/clients_logos/artico.png'
+import havannaLogo from '../assets/clients_logos/havanna.png'
+import subwayLogo from '../assets/clients_logos/subway-logo.avif'
+import naranjaxLogo from '../assets/clients_logos/isologo-naranjax.webp'
+import lacosteLogo from '../assets/clients_logos/Logo_da_Lacoste.png'
+import i47streetLogo from '../assets/clients_logos/47street.webp'
+import cafeMartinezLogo from '../assets/clients_logos/cafe_martinez.webp'
+import montecatiniLogo from '../assets/clients_logos/montecatini.png'
+import torreonLogo from '../assets/clients_logos/Logo-Torreon-del-Monje.png'
+
+import andreaniLogo from '../assets/clients_logos/andreani.svg'
+import clubMilaLogo from '../assets/clients_logos/club_milanesa.webp'
+import raffeLogo from '../assets/clients_logos/logo_raffe.png'
+import tripLogo from '../assets/clients_logos/logo-trip.png'
+import sacoaLogo from '../assets/clients_logos/sacoa.png'
+import ripsaLogo from '../assets/clients_logos/ripsa.svg'
+import tiendaLeonLogo from '../assets/clients_logos/tienda_leon.png'
+import zanellaLogo from '../assets/clients_logos/zanella.png'
+import pampaLogo from '../assets/clients_logos/pampa_novillo.webp'
+
+---
+
+<section class="w-full mx-auto my-35">
+    <div class="space-y-1 flex flex-col items-center mb-16">
+        <h1 class="text-3xl font-semibold text-[#2A5C8B]">
+            Clientes
+        </h1>
+        <div class="w-12 h-1 bg-[#2A5C8B] rounded-full"></div>
+    </div>
+    <div class="wrapper-left flex items-center">
+        <img class="item-left item1" src={articoLogo.src} alt="">
+        <img class="item-left item2" src={havannaLogo.src} alt="">
+        <img class="item-left item3" src={subwayLogo.src} alt="">
+        <img class="item-left item4" src={naranjaxLogo.src} alt="">
+        <img class="item-left item5" src={lacosteLogo.src} alt="">
+        <img class="item-left item6" src={torreonLogo.src} alt="">
+        <img class="item-left item7" src={i47streetLogo.src} alt="">
+        <img class="item-left item8" src={cafeMartinezLogo.src} alt="">
+        <img class="item-left item9" src={montecatiniLogo.src} alt="">
+    </div>
+
+    <div class="wrapper-right flex items-center">
+        <img class="item-right item1" src={andreaniLogo.src} alt="">
+        <img class="item-right item2" src={clubMilaLogo.src} alt="">
+        <img class="item-right item3" src={raffeLogo.src} alt="">
+        <img class="item-right item4" src={tripLogo.src} alt="">
+        <img class="item-right item5" src={sacoaLogo.src} alt="">
+        <img class="item-right item6" src={pampaLogo.src} alt="">
+        <img class="item-right item7" src={ripsaLogo.src} alt="">
+        <img class="item-right item8" src={tiendaLeonLogo.src} alt="">
+        <img class="item-right item9" src={zanellaLogo.src} alt="">
+    </div>
+</section>
+
+<style scoped>
+    .wrapper-left {
+        margin-inline: auto;
+        position: relative;
+        height: 200px;
+        margin-top: 1rem;
+        overflow: hidden;
+        mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0 ,0),
+            rgba(0, 0 ,0 ,1) 20%,
+            rgba(0, 0 ,0 ,1) 80%,
+            rgba(0, 0 ,0 ,0)
+        );
+    }
+
+    .wrapper-right {
+        margin-inline: auto;
+        position: relative;
+        height: 200px;
+        margin-top: 2rem;
+        overflow: hidden;
+        background-color: rgba(42, 92, 139, 0.9);
+    }
+
+    @keyframes scrollLeft {
+        to {
+            left: -200px;
+        }
+    }
+
+    @keyframes scrollRight {
+        to {
+            right: -200px;
+        }
+    }
+
+    .item-left {
+        width: 200px;
+        position: absolute;
+        left: max(calc(200px * 9), 100%);
+        animation: scrollLeft;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .item-right {
+        margin: 50px;
+        width: 200px;
+        position: absolute;
+        right: max(calc(200px * 9), 100%);
+        animation: scrollRight;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .item1 {
+        animation-delay: calc(20s / 9 * (9 - 1) * -1);
+    }
+
+    .item2 {
+        animation-delay: calc(20s / 9 * (9 - 2) * -1);
+    }
+
+    .item3 {
+        animation-delay: calc(20s / 9 * (9 - 3) * -1);
+    }
+
+    .item4 {
+        animation-delay: calc(20s / 9 * (9 - 4) * -1);
+    }
+
+    .item5 {
+        animation-delay: calc(20s / 9 * (9 - 5) * -1);
+    }
+
+    .item6 {
+        animation-delay: calc(20s / 9 * (9 - 6) * -1);
+    }
+
+    .item7 {
+        animation-delay: calc(20s / 9 * (9 - 7) * -1);
+    }
+
+    .item8 {
+        animation-delay: calc(20s / 9 * (9 - 8) * -1);
+    }
+
+    .item9 {
+        animation-delay: calc(20s / 9 * (9 - 9) * -1);
+    }
+
+
+</style>
