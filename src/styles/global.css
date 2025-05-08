@@ -12,10 +12,6 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-
-* {
-    outline: 1px solid red;
-}
 body {
     margin: 0;
     padding: 0;
