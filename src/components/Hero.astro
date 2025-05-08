@@ -1,10 +1,11 @@
 <section
+   id="inicio"
    class="w-full h-screen text-white bg-hero bg-cover bg-no-repeat bg-bottom"
 >
    <div class="absolute inset-0 flex items-center justify-center p-4">
       <div class="text-center flex flex-col items-center justify-center gap-3 md:gap-5">
          <svg
-            class="bg-[#2A5C8B] p-3 md:p-4 rounded-full w-16 h-16 md:w-24 md:h-24 lg:w-[100px] lg:h-[100px]"
+            class="bg-[#902727] p-3 md:p-4 rounded-full w-16 h-16 md:w-24 md:h-24 lg:w-[100px] lg:h-[100px]"
             viewBox="0 0 327.339 327.339"
             fill="#ffffff"
             xmlns="http://www.w3.org/2000/svg"
@@ -25,16 +26,21 @@
             </g>
          </svg>
          <h1
-            class="text-white text-3xl md:text-5xl lg:text-6xl font-bold uppercase drop-shadow-[0_5px_5px_rgba(0,0,0,0.4)] text-shadow-lg"
+            class="text-[#902727] text-3xl md:text-5xl lg:text-6xl font-bold uppercase"
          >
             Toledo, Moreno & Asoc.
          </h1>
          <p
             class="text-white text-lg md:text-2xl lg:text-3xl uppercase drop-shadow-[0_4px_4px_rgba(0,0,0,0.35)] text-shadow-md max-w-3xl"
          >
-            Gestión de habilitaciones de comercios, industrias y cartelería
+         +20 años de experiencia en gestión de habilitaciones de comercios, industrias y cartelería
          </p>
-         <button class="btn-cta mt-2 md:mt-4">Contactanos</button>
+         <a href="#contacto" class="cursor-pointer group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-[#902727] px-6 font-medium text-neutral-200">
+            <span class="font-semibold text-xl">Contactanos</span>
+            <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-2 group-hover:opacity-100">
+            <i class="text-xl fa-solid fa-paper-plane"></i>
+         </div>
+         </a>
       </div>
    </div>
 </section>
@@ -44,7 +50,7 @@
       /* OPCION 1 */
       background: linear-gradient(
             rgba(209, 215, 219, 0.65),
-            rgba(42, 92, 139, 0.65)
+            rgba(71, 71, 71, 0.623)
          ),
          url("../assets/bg-4.jpg");
    }

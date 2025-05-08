@@ -1,0 +1,48 @@
+---
+// WhatsAppButton.astro
+const contact = {
+  name: "Jorge",
+  number: "5491123456789",
+  message: "Hola, me interesa realizar una gestión!"
+};
+const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(contact.message)}`;
+---
+<a 
+  href={whatsappUrl} 
+  class="whatsapp-btn" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  aria-label={`Contactar a ${contact.name} por WhatsApp`}
+>
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.2s ease-in-out;
+    text-decoration: none;
+  }
+
+  .whatsapp-btn:active {
+    transform: scale(0.95);
+  }
+</style>
+

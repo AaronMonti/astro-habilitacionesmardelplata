@@ -8,6 +8,9 @@
     --animate-delay: 0.5s;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;

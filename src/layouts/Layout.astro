@@ -1,8 +1,8 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro";
-import CursorFollower from "../components/CursorFollower.astro";
 import Footer from "../components/Footer.astro";
+import WhatsAppButton from "../components/WhatsAppButton.astro";
 ---
 
 <!doctype html>
@@ -10,7 +10,7 @@ import Footer from "../components/Footer.astro";
    <head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="../assets/pen.svg" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>TOLEDO, MORENO & ASOC. - Habilitaciones Mar del Plata</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,9 +20,9 @@ import Footer from "../components/Footer.astro";
     <script src="https://kit.fontawesome.com/c2ce8f41dc.js" crossorigin="anonymous"></script>
    </head>
    <body class="bg-white font-merriweather">
-	<CursorFollower />
       <Header />
       <slot />
+	  <WhatsAppButton />
 	  <Footer />
    </body>
 </html>
