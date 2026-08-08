@@ -7,7 +7,7 @@ import WhatsAppButton from "../components/WhatsAppButton.astro";
 
 <!doctype html>
 <html lang="en">
-   <head>
+	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -15,17 +15,32 @@ import WhatsAppButton from "../components/WhatsAppButton.astro";
 		<title>TOLEDO, MORENO & ASOC. - Habilitaciones Mar del Plata</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c2ce8f41dc.js" crossorigin="anonymous"></script>
-   </head>
-   <body class="bg-white font-merriweather">
-      <Header />
-      <slot />
-	  <WhatsAppButton />
-	  <Footer />
-   </body>
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Italianno&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playball&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/c2ce8f41dc.js"
+			crossorigin="anonymous"></script>
+	</head>
+	<body class="bg-white font-ibm">
+		<Header />
+		<slot />
+		<WhatsAppButton />
+		<Footer />
+	</body>
 </html>
 
-<style>
-</style>
+<style></style>

@@ -1,7 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-    --font-merriweather: "Lato", serif;
+    /* Fonts */
+    --font-epilogue: "Epilogue", sans-serif;
+    --font-ibm: "IBM Plex Sans", sans-serif;
+    --font-cookie: "Italianno", cursive;
+    --font-merriweather: "Merriweather", serif;
+
+    /* Brand Colors */
+    --color-brand-primary: #902727;
+    --color-brand-dark: #6b0008;
+    --color-brand-light: #b72b2b;
+    --color-brand-hover: #9f2424;
+    --color-brand-accent: #B53A3A;
+    --color-brand-divider: #8C1B1B;
+
+    /* Text & Neutral Colors */
+    --color-text-heading: #1A202C;
+    --color-text-body: #555f71;
+    --color-text-muted: #8c716e;
+
+    /* Surface / Background Colors */
+    --color-surface-light: #f7f9fb;
+    --color-surface-muted: #f2f4f6;
+    --color-surface-gray: #e0e3e5;
+    --color-surface-dark: #2d3133;
+
+    /* Border & Input Colors */
+    --color-border-subtle: #e0bfbc;
+    --color-border-light: #e6e8ea;
+
+    /* Functional & Social Colors */
+    --color-success: #2F855A;
+    --color-whatsapp: #25D366;
+    --color-instagram: #E4405F;
+    --color-linkedin: #0077B5;
 }
 
 :root {
@@ -12,9 +45,20 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family: var(--font-ibm);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-epilogue);
 }

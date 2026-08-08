@@ -1,178 +1,196 @@
-<section id="contacto">
-   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div
-         class="space-y-1 flex flex-col items-center mb-15"
-         data-aos="fade-down"
-         data-aos-duration="1000"
-      >
-         <h1 class="text-3xl font-semibold text-[#902727]">Contacto</h1>
-         <div class="w-12 h-1 bg-[#902727] rounded-full"></div>
+---
+const contact = {
+   name: "Jorge Toledo",
+   number: "5492235322443",
+   message: "Hola, me interesa realizar una gestión!",
+};
+const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(contact.message)}`;
+---
+
+<section class="bg-white py-20" id="contacto">
+   <div class="mx-auto max-w-[1200px] px-6">
+      <!-- Título -->
+      <div class="mb-16 text-center">
+         <h2 class="mb-4 text-3xl font-bold leading-[1.3] text-text-heading">
+            Contacto
+         </h2>
+
+         <div class="mx-auto mb-6 h-1 w-16 rounded bg-brand-divider"></div>
+
+         <p class="text-lg leading-[1.6] text-text-body">
+            Inicie su trámite hoy. Contáctenos para una consulta inicial.
+         </p>
       </div>
-      <div class="grid lg:grid-cols-2 grid-cols-1 gap-0 md:gap-5">
-         <div
-            class="lg:mb-0 mb-10"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-         >
-            <div class="group w-full h-full">
-               <div class="relative h-full">
-                  <img
-                     src="/bg-3.avif"
-                     alt="ContactUs tailwind section"
-                     class="w-full h-full lg:rounded-l-sm rounded-sm bg-blend-multiply bg-[#902727] object-cover"
-                  />
-                  <div class="absolute bottom-0 w-full lg:p-11 p-5">
-                     <div class="bg-white rounded-sm p-6 block">
-                        <a
-                           class="flex items-center mb-6 group transition-all duration-300 hover:translate-x-2"
-                        >
-                           <i
-                              class="fa-solid fa-phone text-[#902727] text-xl group-hover:scale-110 transition-all duration-300"
-                              data-aos="zoom-in"
-                              data-aos-delay="100"></i>
-                           <div class="flex flex-col">
-                              <h5
-                                 class="text-black text-base font-normal leading-6 ml-5 group-hover:text-[#902727] transition-all duration-300"
-                              >
-                                 (0223) 15-532-2443
-                              </h5>
-                              <h5
-                                 class="text-black text-base font-normal leading-6 ml-5 group-hover:text-[#902727] transition-all duration-300"
-                              >
-                                 (0223) 15-564-6847
-                              </h5>
-                           </div>
-                        </a>
-                        <a
-                           href="mailto:toledomorenoyasoc@habilitacionesmardelplata.com"
-                           class="flex items-center mb-6 group transition-all duration-300 hover:translate-x-2"
-                        >
-                           <i
-                              class="fa-solid fa-envelope text-[#902727] text-xl group-hover:scale-110 transition-all duration-300"
-                              data-aos="zoom-in"
-                              data-aos-delay="200"></i>
-                           <h5
-                              class="text-black text-base font-normal leading-6 ml-5 group-hover:text-[#902727] transition-all duration-300 overflow-auto"
-                           >
-                              toledomorenoyasoc@habilitacionesmardelplata.com
-                           </h5>
-                        </a>
-                        <a
-                           href="https://maps.google.com/?q=CORDOBA+1882,+PISO+4,+OFICINA+42,+Mar+del+plata"
-                           target="_blank"
-                           class="flex items-center group transition-all duration-300 hover:translate-x-2"
-                        >
-                           <i
-                              class="fa-solid fa-location-dot text-[#902727] text-xl group-hover:scale-110 transition-all duration-300"
-                              data-aos="zoom-in"
-                              data-aos-delay="300"></i>
-                           <h5
-                              class="text-black text-base font-normal leading-6 ml-5 group-hover:text-[#902727] transition-all duration-300"
-                           >
-                              CORDOBA 1882, PISO 4, OFICINA 42, Mar del plata.
-                           </h5>
-                        </a>
-                     </div>
+
+      <div class="flex flex-col lg:flex-row gap-16">
+         <!-- Información -->
+         <div>
+            <h3 class="mb-6 text-2xl font-semibold text-text-heading">
+               Información de Contacto
+            </h3>
+
+            <div class="space-y-6">
+               <!-- Dirección -->
+               <div class="flex items-start gap-4">
+                  <i class="fa-solid fa-location-dot mt-1 text-brand-dark"></i>
+
+                  <div class="min-w-0">
+                     <p class="font-bold text-text-heading">Dirección</p>
+
+                     <p class="text-text-body">
+                        CORDOBA 1882, PISO 4, OFICINA 42,<br />
+                        Mar del Plata.
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Teléfonos -->
+               <div class="flex items-start gap-4">
+                  <i class="fa-solid fa-phone mt-1 text-brand-dark"></i>
+
+                  <div class="min-w-0">
+                     <p class="font-bold text-text-heading">Teléfonos</p>
+
+                     <p class="text-text-body">(0223) 15-532-2443</p>
+
+                     <p class="text-text-body">(0223) 15-564-6847</p>
+                  </div>
+               </div>
+
+               <!-- Email -->
+               <div class="flex items-start gap-4">
+                  <i class="fa-solid fa-envelope mt-1 text-brand-dark"></i>
+
+                  <div class="min-w-0">
+                     <p class="font-bold text-text-heading">Email</p>
+
+                     <a
+                        href="mailto:toledomorenoyasoc@habilitacionesmardelplata.com"
+                        class="text-brand-dark hover:underline"
+                     >
+                        toledomorenoyasoc@habilitacionesmardelplata.com
+                     </a>
                   </div>
                </div>
             </div>
+
+            <!-- Redes -->
+            <div class="mt-8 flex gap-4">
+               <a
+                  href="https://www.instagram.com/habilitacionesmardelplata/"
+                  target="_blank"
+                  class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-muted text-text-body transition hover:text-brand-dark"
+               >
+                  <i class="fa-brands fa-instagram text-lg"></i>
+               </a>
+
+               <a
+                  href="https://www.linkedin.com/company/habilitaciones-mar-del-plata/"
+                  target="_blank"
+                  class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-muted text-text-body transition hover:text-brand-dark"
+               >
+                  <i class="fa-brands fa-linkedin-in text-lg"></i>
+               </a>
+
+               <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  aria-label={`Contactar a ${contact.name} por WhatsApp`}
+                  class="flex h-10 w-10 items-center justify-center rounded-full bg-success/10 text-success transition hover:bg-success hover:text-white"
+               >
+                  <i class="fa-brands fa-whatsapp text-lg"></i>
+               </a>
+            </div>
          </div>
 
-         <div
-            class="bg-gray-50 p-5 lg:p-11 lg:rounded-r-2xl rounded-sm"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-         >
+         <!-- Formulario -->
+         <div class="w-full rounded-lg bg-surface-muted p-6 lg:p-10">
             <form id="contactForm" class="flex flex-col gap-4">
                <div class="relative">
+                  <label
+                     class="mb-1 block text-sm font-medium text-text-heading"
+                     for="name"
+                  >
+                     Nombre
+                  </label>
+
                   <input
-                     type="text"
+                     id="name"
                      name="name"
-                     class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-sm border border-gray-200 focus:outline-none focus:border-[#902727] pl-4 mb-2 transition-all duration-300"
+                     type="text"
                      placeholder="Nombre"
                      required
+                     class="h-12 w-full rounded border border-border-subtle bg-white px-4 text-text-body placeholder-text-muted outline-none transition focus:border-brand-dark"
                   />
-                  <div class="error-message text-red-500 text-sm mb-6 hidden"></div>
+
+                  <div class="error-message hidden text-sm text-red-500"></div>
                </div>
 
                <div class="relative">
+                  <label
+                     class="mb-1 block text-sm font-medium text-text-heading"
+                     for="email"
+                  >
+                     Email
+                  </label>
+
                   <input
-                     type="email"
+                     id="email"
                      name="email"
-                     class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-sm border border-gray-200 focus:outline-none focus:border-[#902727] pl-4 mb-2 transition-all duration-300"
+                     type="email"
                      placeholder="Email"
                      required
+                     class="h-12 w-full rounded border border-border-subtle bg-white px-4 text-text-body placeholder-text-muted outline-none transition focus:border-brand-dark"
                   />
-                  <div class="error-message text-red-500 text-sm mb-6 hidden"></div>
+
+                  <div class="error-message hidden text-sm text-red-500"></div>
                </div>
 
                <div class="relative">
+                  <label
+                     class="mb-1 block text-sm font-medium text-text-heading"
+                     for="phone"
+                  >
+                     Teléfono
+                  </label>
+
                   <input
-                     type="tel"
+                     id="phone"
                      name="phone"
-                     class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-sm border border-gray-200 focus:outline-none focus:border-[#902727] pl-4 mb-2 transition-all duration-300"
+                     type="tel"
                      placeholder="Teléfono"
                      required
+                     class="h-12 w-full rounded border border-border-subtle bg-white px-4 text-text-body placeholder-text-muted outline-none transition focus:border-brand-dark"
                   />
-                  <div class="error-message text-red-500 text-sm mb-6 hidden"></div>
+
+                  <div class="error-message hidden text-sm text-red-500"></div>
                </div>
 
-               <div class="mb-2">
-                  <h4 class="text-gray-500 text-lg font-normal leading-7 mb-4">
-                     Método preferido de comunicación
-                  </h4>
-                  <div class="flex">
-                     <div class="flex items-center mr-11">
-                        <input
-                           id="radio-email"
-                           type="radio"
-                           name="preferred_method"
-                           value="Email"
-                           class="appearance-none w-5 h-5 border-2 border-[#902727] rounded-sm checked:bg-[#902727] checked:border-[#902727] relative cursor-pointer"
-                           required
-                        />
-                        <label
-                           for="radio-email"
-                           class="flex items-center cursor-pointer text-gray-500 text-base font-normal leading-6 ml-2"
-                        >
-                           Email
-                        </label>
-                     </div>
-                     <div class="flex items-center">
-                        <input
-                           id="radio-phone"
-                           type="radio"
-                           name="preferred_method"
-                           value="Telefono"
-                           class="appearance-none w-5 h-5 border-2 border-[#902727] rounded-sm checked:bg-[#902727] checked:border-[#902727] relative cursor-pointer"
-                        />
-                        <label
-                           for="radio-phone"
-                           class="flex items-center cursor-pointer text-gray-500 text-base font-normal leading-6 ml-2"
-                        >
-                           Teléfono
-                        </label>
-                     </div>
-                  </div>
-                  <div class="error-message text-red-500 text-sm mt-2 hidden"></div>
-               </div>
+               <div>
+                  <label
+                     class="mb-1 block text-sm font-medium text-text-heading"
+                     for="message"
+                  >
+                     Mensaje
+                  </label>
 
-               <div class="relative">
                   <textarea
+                     id="message"
                      name="message"
-                     class="w-full h-32 text-gray-600 placeholder-gray-400 bg-transparent text-lg shadow-sm font-normal leading-7 rounded-sm border border-gray-200 focus:outline-none focus:border-[#902727] p-4 mb-2 transition-all duration-300"
                      placeholder="Mensaje"
                      required
+                     class="h-32 w-full rounded border border-border-subtle bg-white p-4 text-text-body placeholder-text-muted outline-none transition focus:border-brand-dark"
                   ></textarea>
-                  <div class="error-message text-red-500 text-sm mb-6 hidden"></div>
                </div>
 
                <button
                   type="submit"
-                  class="cursor-pointer w-full h-12 text-white text-base font-semibold leading-6 rounded-sm transition-all duration-700 hover:bg-[#802727] bg-[#902727] shadow-sm"
-                  >Enviar</button
+                  class="h-12 w-full rounded bg-brand-dark text-sm font-semibold text-white shadow-sm transition hover:bg-brand-divider"
                >
-               <div id="formMessage" class="mt-4 text-center hidden"></div>
+                  Enviar Mensaje
+               </button>
+
+               <div id="formMessage" class="mt-4 hidden text-center"></div>
             </form>
          </div>
       </div>
@@ -191,34 +209,47 @@
 
          try {
             formMessage!.textContent = "Enviando mensaje...";
-            formMessage!.classList.remove("hidden", "text-red-500", "text-green-500");
+            formMessage!.classList.remove(
+               "hidden",
+               "text-red-500",
+               "text-green-500",
+            );
             formMessage!.classList.add("text-gray-500");
 
             const response = await fetch("sendmail.php", {
                method: "POST",
-               body: formData
+               body: formData,
             });
 
             const result = await response.json();
 
             if (result.success) {
                formMessage!.textContent = "¡Mensaje enviado con éxito!";
-               formMessage!.classList.remove("hidden", "text-red-500", "text-gray-500");
+               formMessage!.classList.remove(
+                  "hidden",
+                  "text-red-500",
+                  "text-gray-500",
+               );
                formMessage!.classList.add("text-green-500");
                (e.target as HTMLFormElement).reset();
             } else {
                throw new Error(result.error || "Error al enviar el mensaje");
             }
          } catch (error: any) {
-            console.error('Error completo:', error);
-            let errorMessage = "Error al enviar el mensaje. Por favor, intente nuevamente.";
-            
+            console.error("Error completo:", error);
+            let errorMessage =
+               "Error al enviar el mensaje. Por favor, intente nuevamente.";
+
             if (error.message) {
                errorMessage = `Error: ${error.message}`;
             }
-            
+
             formMessage!.textContent = errorMessage;
-            formMessage!.classList.remove("hidden", "text-green-500", "text-gray-500");
+            formMessage!.classList.remove(
+               "hidden",
+               "text-green-500",
+               "text-gray-500",
+            );
             formMessage!.classList.add("text-red-500");
          }
 
@@ -242,6 +273,6 @@
 
    input:focus,
    textarea:focus {
-      border-color: #902727;
+      border-color: var(--color-brand-primary);
    }
 </style>

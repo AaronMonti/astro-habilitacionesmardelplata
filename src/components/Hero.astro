@@ -1,105 +1,95 @@
-<section
-   id="inicio"
-   class="w-full h-screen text-white bg-hero bg-cover bg-no-repeat bg-bottom"
->
+<section id="inicio" class="w-full h-screen text-white bg-hero bg-no-repeat">
    <div class="absolute inset-0 flex items-center justify-center p-4">
-      <div class="text-center flex flex-col items-center justify-center gap-3 md:gap-5">
-         <svg
-            class="bg-[#902727] p-3 md:p-4 rounded-full w-16 h-16 md:w-24 md:h-24 lg:w-[100px] lg:h-[100px]"
-            viewBox="0 0 327.339 327.339"
-            fill="#ffffff"
-            xmlns="http://www.w3.org/2000/svg"
+      <div
+         class="text-center flex flex-col items-center justify-center gap-3 md:gap-5"
+      >
+         <span
+            class="group relative inline-flex max-w-[105px] cursor-pointer items-center gap-2 overflow-hidden whitespace-nowrap rounded-full border bg-gradient-to-r from-brand-primary to-brand-accent px-4 py-1.5 text-sm font-semibold text-white shadow-lg shadow-brand-primary/25 transition-all duration-500 hover:max-w-[520px]"
          >
-            <g>
-               <path
-                  d="M197.234,47.994h-67.537c0,95.635-11.786,124.19-24.024,140.687 
-                     c-12.238,16.491,4.531,27.924,4.531,27.924c25.373,15.708,41.429,71.453,44.698,83.691c-3.726,2.763-6.168,7.152-6.168,12.145 
-                     c0,7.419,5.336,13.565,12.368,14.876l-0.076-24.595l-0.016-5.151l-0.261-85.66l-14.191-14.191h33.82l-14.185,14.185l0.261,85.638 
-                     l0.016,5.183l0.076,24.612c7.103-1.256,12.51-7.43,12.51-14.892c0-5.319-2.752-9.981-6.897-12.684 
-                     c9.159-36.447,32.248-69.446,45.927-82.244c14.049-13.146,5.439-24.356,5.439-24.356 
-                     C194.965,147.045,197.234,47.994,197.234,47.994z"
-               ></path>
-               <path
-                  d="M124.35,0v12.689h-8.039c-7.636,0-13.826,6.19-13.826,13.826s6.19,13.826,13.826,13.826h95.124 
-                     c7.636,0,13.826-6.19,13.826-13.826s-6.19-13.826-13.826-13.826H199.48V0H124.35z"
-               ></path>
-            </g>
-         </svg>
+            <!-- Reflejo -->
+            <span
+               class="animate-shimmer absolute inset-y-0 -left-20 w-10 -skew-x-12 bg-white/30 blur-sm"
+            ></span>
+            <i class="shrink-0 fa-solid fa-medal"></i>
+            <span class="shrink-0">20 años</span>
+
+            <span
+               class="translate-x-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+            >
+               acompañando en procesos de habilitación
+            </span>
+         </span>
+
          <h1
-            class="text-[#902727] text-3xl md:text-5xl lg:text-6xl font-bold uppercase"
+            class="text-white text-5xl lg:text-7xl leading-tight tracking-tight font-bold drop-shadow-[0_4px_10px_rgba(0,0,0,0.35)]"
          >
-            Toledo, Moreno & Asoc.
+            Toledo, Moreno
+            <span class="block text-brand-light"> & Asoc. </span>
          </h1>
+
          <p
-            class="text-white text-lg md:text-2xl lg:text-3xl uppercase drop-shadow-[0_4px_4px_rgba(0,0,0,0.35)] text-shadow-md max-w-3xl"
+            class="mt-5 text-lg leading-relaxed text-white/90 lg:text-xl drop-shadow-[0_3px_5px_rgba(0,0,0,0.35)]"
          >
-         Gestión de habilitaciones de comercios, industrias y cartelería
+            Especialistas en la gestión de
+            <span class="font-semibold">
+               habilitaciones comerciales, industriales y cartelería
+            </span>
+            .
          </p>
-         <a href="#contacto" class="cursor-pointer group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-[#902727] px-6 font-medium text-neutral-200">
-            <span class="font-semibold text-xl">Contáctanos</span>
-            <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-2 group-hover:opacity-100">
-            <i class="text-xl fa-solid fa-paper-plane"></i>
+         <p
+            class="max-w-2xl font-cookie text-3xl font-medium text-white/90 md:text-5xl drop-shadow-[0_3px_5px_rgba(0,0,0,0.35)]"
+         >
+            "Si vas a invertir, invertí también en hacerlo bien desde el
+            inicio…"
+         </p>
+         <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+               href="#contacto"
+               class="group relative inline-flex items-center gap-3 bg-brand-light px-8 py-4 rounded text-white font-button text-button transition-colors duration-300 hover:bg-brand-hover"
+            >
+               <span>Comenzar gestión</span>
+
+               <i
+                  class="fa-solid fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"
+               ></i>
+
+               <span
+                  class="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-white/80 transition-all duration-300 group-hover:w-4/5"
+               ></span>
+            </a>
+            <a
+               class="border border-white/30 text-white font-button text-button px-8 py-4 rounded hover:bg-white/10 transition-colors text-center backdrop-blur-sm"
+               href="#proceso"
+            >
+               Conocer Proceso
+            </a>
          </div>
-         </a>
       </div>
    </div>
 </section>
 
 <style>
    .bg-hero {
-      /* OPCION 1 */
-      background: linear-gradient(
-            rgba(209, 215, 219, 0.65),
-            rgba(71, 71, 71, 0.623)
+      background:
+         linear-gradient(
+            to right,
+            rgba(26, 32, 44, 0.9),
+            rgba(26, 32, 44, 0.4)
          ),
          url("../assets/bg-4.jpg");
-   }
 
-   /* Botón CTA Primario */
-   .btn-cta {
-      background-color: white;
-      color: #F4A261;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      mix-blend-mode: multiply;
    }
-
-   @media (min-width: 768px) {
-      .btn-cta {
-         padding: 12px 30px;
-         font-size: 16px;
+   @keyframes shimmer {
+      0% {
+         left: -45%;
+      }
+      100% {
+         left: 130%;
       }
    }
 
-   /* Botón Secundario */
-   .btn-secondary {
-      background-color: transparent;
-      color: #2a5c8b; /* Azul corporativo */
-      padding: 10px 25px;
-      border: 2px solid #2a5c8b;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
-   }
-
-   .btn-secondary:hover {
-      background-color: rgba(42, 92, 139, 0.08); /* Azul con 8% de opacidad */
-      border-color: #1f4566; /* Azul más oscuro para contraste */
-   }
-
-   /* Añadimos efectos de text-shadow para mejor legibilidad */
-   .text-shadow-lg {
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-   }
-
-   .text-shadow-md {
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+   .animate-shimmer {
+      animation: shimmer 2.8s ease-in-out infinite;
    }
 </style>
