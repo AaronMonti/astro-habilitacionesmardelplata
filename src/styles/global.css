@@ -5,7 +5,6 @@
     --font-epilogue: "Epilogue", sans-serif;
     --font-ibm: "IBM Plex Sans", sans-serif;
     --font-cookie: "Italianno", cursive;
-    --font-merriweather: "Merriweather", serif;
 
     /* Brand Colors */
     --color-brand-primary: #902727;
@@ -38,19 +37,21 @@
 }
 
 :root {
-    --animate-delay: 0.5s;
+    /* Curvas compartidas por todas las interacciones */
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --header-offset: 5rem;
+    /* Evita el salto horizontal al abrir el menú móvil */
+    scrollbar-gutter: stable;
 }
 
 html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
     font-family: var(--font-ibm);
 }
 
@@ -61,4 +62,35 @@ h4,
 h5,
 h6 {
     font-family: var(--font-epilogue);
+}
+
+/* El header fijo no debe tapar el inicio de cada sección */
+section[id] {
+    scroll-margin-top: var(--header-offset);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Reflejo de la insignia: se anima con transform para no forzar layout */
+@keyframes shimmer {
+    from {
+        transform: translateX(-350%) skewX(-12deg);
+    }
+    to {
+        transform: translateX(1200%) skewX(-12deg);
+    }
+}
+
+.animate-shimmer {
+    animation: shimmer 2.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-shimmer {
+        animation: none;
+    }
 }

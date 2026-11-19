@@ -1,5 +1,4 @@
 ---
-/* Importaciones de logos de la carpeta "arriba" */
 import havannaLogo from "../assets/clients_logos/arriba/havanna.png";
 import naranjaxLogo from "../assets/clients_logos/arriba/isologo-naranjax.webp";
 import naldoLogo from "../assets/clients_logos/arriba/naldo.svg";
@@ -17,7 +16,6 @@ import laCasianaLogo from "../assets/clients_logos/arriba/logo_la_casiana.png";
 import panacityLogo from "../assets/clients_logos/arriba/panacity-logo.jpg";
 import paladiniLogo from "../assets/clients_logos/arriba/logo-paladini.png";
 
-/* Importaciones de logos de la carpeta "medio" */
 import pumaLogo from "../assets/clients_logos/medio/puma.png";
 import lacosteLogoMedio from "../assets/clients_logos/medio/Logo_da_Lacoste.png";
 import tiendaLeonLogoMedio from "../assets/clients_logos/medio/tienda_leon.png";
@@ -58,9 +56,7 @@ import comarLogo from "../assets/clients_logos/medio/chevrolet-comar.avif";
 import baumLogo from "../assets/clients_logos/medio/logo-baum.png";
 import rinconDulceLogo from "../assets/clients_logos/medio/rincon_dulce.jpg";
 import laCuadraLogo from "../assets/clients_logos/medio/la_cuadra.jpg";
-import gymFlex from "../assets/clients_logos/medio/gym_flex.jpg";
 
-/* Importaciones de logos de la carpeta "abajo" */
 import torreonLogo from "../assets/clients_logos/abajo/Logo-Torreon-del-Monje.png";
 import i47streetLogo from "../assets/clients_logos/abajo/47street.webp";
 import ripsaLogo from "../assets/clients_logos/abajo/ripsa.svg";
@@ -79,6 +75,105 @@ import mercantilAndinaLogo from "../assets/clients_logos/abajo/mercantilandina.w
 import mastromarinoLogo from "../assets/clients_logos/abajo/mastromarino.jpg";
 import matafuegosMarplatenseLogo from "../assets/clients_logos/abajo/matafuegosmarplatense.avif";
 import matafuegosMarDelPlataLogo from "../assets/clients_logos/abajo/matafuergosmardelplata.webp";
+import gymFlex from "../assets/clients_logos/medio/gym_flex.jpg";
+
+type ClientLogo = {
+    src: string;
+    alt: string;
+    onDark?: boolean;
+    onWhite?: boolean;
+};
+
+const topLogos: ClientLogo[] = [
+    { src: havannaLogo.src, alt: "Havanna" },
+    { src: naranjaxLogo.src, alt: "NaranjaX" },
+    { src: naldoLogo.src, alt: "Naldo" },
+    { src: articoLogo.src, alt: "Artico" },
+    { src: mercadoPuertoLogo.src, alt: "Mercado Puerto" },
+    { src: edeaLogo.src, alt: "Edea", onDark: true },
+    { src: raffeLogo.src, alt: "Raffe" },
+    { src: frioPolarLogo.src, alt: "Frío Polar" },
+    { src: pintureriasCentroLogo.src, alt: "Pinturerías Centro" },
+    { src: openSportLogo.src, alt: "Open Sport" },
+    { src: coppensLogo.src, alt: "Coppens" },
+    { src: favaLogo.src, alt: "Fava" },
+    { src: floridaOutletLogo.src, alt: "Florida Outlet" },
+    { src: laCasianaLogo.src, alt: "La Casiana" },
+    { src: panacityLogo.src, alt: "Panacity" },
+    { src: altoConstitucionLogo.src, alt: "Alto Constitución" },
+    { src: paladiniLogo.src, alt: "Paladini" },
+];
+
+const middleLogos: ClientLogo[] = [
+    { src: pumaLogo.src, alt: "Puma" },
+    { src: lacosteLogoMedio.src, alt: "Lacoste" },
+    { src: tiendaLeonLogoMedio.src, alt: "Tienda León" },
+    { src: cafeMartinezLogoMedio.src, alt: "Café Martínez" },
+    { src: andreaniLogoMedio.src, alt: "Andreani" },
+    { src: sacoaLogoMedio.src, alt: "Sacoa" },
+    { src: montecatiniLogoMedio.src, alt: "Montecatini" },
+    { src: clubMilaLogo.src, alt: "Club Milanesa" },
+    { src: tripLogo.src, alt: "Trip" },
+    { src: pampaLogo.src, alt: "Pampa Novillo" },
+    { src: centrosiderLogo.src, alt: "Centrosider" },
+    { src: altoConstitucionLogo.src, alt: "Alto Constitución" },
+    { src: feriaIndependenciaLogo.src, alt: "Feria Independencia" },
+    { src: laPrimeraCafeLogo.src, alt: "La Primera Café" },
+    { src: sullairLogo.src, alt: "Sullair" },
+    { src: beniplastLogo.src, alt: "Beniplast" },
+    { src: arohaLogo.src, alt: "Aroha" },
+    { src: mrFlyLogo.src, alt: "Mr Fly" },
+    { src: terrazasLogo.src, alt: "Terrazas Balneario" },
+    { src: alicanteBalnearioLogo.src, alt: "Alicante Balneario" },
+    { src: alfonsinaBalnearioLogo.src, alt: "Alfonsina Balneario" },
+    { src: cripLogo.src, alt: "CRIP" },
+    { src: camaronBrujoLogo.src, alt: "Camarón Brujo" },
+    { src: ardapezLogo.src, alt: "Ardapez" },
+    { src: syngentaLogo.src, alt: "Syngenta" },
+    { src: elRodeoLogo.src, alt: "El Rodeo" },
+    { src: antoniucciLogo.src, alt: "Antoniucci" },
+    { src: lindeLogo.src, alt: "Linde" },
+    { src: yachtClubLogo.src, alt: "Yacht Club", onWhite: true },
+    { src: golfClubLogo.src, alt: "Golf Club" },
+    { src: nikroLogo.src, alt: "Nikro" },
+    { src: ambitoLogo.src, alt: "Ámbito" },
+    { src: mercedinoLogo.src, alt: "Mercadino" },
+    { src: multiEnvasesLogo.src, alt: "Multi Envases" },
+    { src: carnicosLogo.src, alt: "Cárnicos" },
+    { src: baguetteLogo.src, alt: "Baguette" },
+    { src: comarLogo.src, alt: "Chevrolet Comar" },
+    { src: baumLogo.src, alt: "Baum" },
+    { src: rinconDulceLogo.src, alt: "Rincón Dulce" },
+    { src: laCuadraLogo.src, alt: "La Cuadra" },
+];
+
+const bottomLogos: ClientLogo[] = [
+    { src: torreonLogo.src, alt: "Torreón del Monje" },
+    { src: i47streetLogo.src, alt: "47 Street" },
+    { src: ripsaLogo.src, alt: "Ripsa" },
+    { src: zanellaLogo.src, alt: "Zanella" },
+    { src: mayoristaSotoLogo.src, alt: "Mayorista Soto" },
+    { src: campoVerdeLogo.src, alt: "Campo Verde" },
+    { src: santulliLogo.src, alt: "Santulli" },
+    { src: libreriaLuroLogo.src, alt: "Librería Luro" },
+    { src: smataLogo.src, alt: "SMATA" },
+    { src: utaLogo.src, alt: "UTA" },
+    { src: alitoLogo.src, alt: "Alito" },
+    { src: texanoLogo.src, alt: "Texano" },
+    { src: luzYFuerzaLogo.src, alt: "Luz y Fuerza" },
+    { src: colegioNacionesUnidasLogo.src, alt: "Colegio Naciones Unidas" },
+    { src: mercantilAndinaLogo.src, alt: "Mercantil Andina" },
+    { src: mastromarinoLogo.src, alt: "Mastromarino" },
+    { src: matafuegosMarplatenseLogo.src, alt: "Matafuegos Marplatense" },
+    { src: matafuegosMarDelPlataLogo.src, alt: "Matafuegos Mar del Plata" },
+    { src: gymFlex.src, alt: "Flex Gym" },
+];
+
+const rows = [
+    { name: "arriba", logos: topLogos, reverse: false, large: true },
+    { name: "medio", logos: middleLogos, reverse: true, large: false },
+    { name: "abajo", logos: bottomLogos, reverse: false, large: false },
+];
 ---
 
 <section id="clientes" class="w-full mx-auto py-20 bg-surface-light">
@@ -90,1049 +185,47 @@ import matafuegosMarDelPlataLogo from "../assets/clients_logos/abajo/matafuergos
         <div class="mx-auto mb-6 h-1 w-16 rounded bg-brand-divider"></div>
     </div>
 
-    <!-- Primera fila - Logos de "arriba" -->
-    <div class="wrapper-arriba">
-        <div class="carousel">
-            <div class="group flex items-center h-50">
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={havannaLogo.src}
-                        alt="Havanna"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={naranjaxLogo.src}
-                        alt="NaranjaX"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={naldoLogo.src}
-                        alt="Naldo"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={articoLogo.src}
-                        alt="Artico"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={mercadoPuertoLogo.src}
-                        alt="Mercado Puerto"
-                    />
-                </div>
-                <div
-                    class="mx-5 flex h-24 w-52 items-center justify-center rounded-lg border border-border-light bg-surface-dark px-8 shadow-sm"
-                >
-                    <img
-                        class="item-logo logo-grande"
-                        src={edeaLogo.src}
-                        alt="Edea"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={raffeLogo.src}
-                        alt="Raffe"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={frioPolarLogo.src}
-                        alt="Frío Polar"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={pintureriasCentroLogo.src}
-                        alt="Pinturerías Centro"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={openSportLogo.src}
-                        alt="Open Sport"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={coppensLogo.src}
-                        alt="Coppens"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={favaLogo.src}
-                        alt="Fava"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={floridaOutletLogo.src}
-                        alt="Florida Outlet"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={laCasianaLogo.src}
-                        alt="La Casiana"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={panacityLogo.src}
-                        alt="Panacity"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={altoConstitucionLogo.src}
-                        alt="Alto Constitución"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={paladiniLogo.src}
-                        alt="Paladini"
-                    />
+    {
+        rows.map((row) => (
+            <div class:list={["logo-row", `logo-row--${row.name}`]}>
+                <div class="carousel">
+                    {[0, 1].map((copy) => (
+                        <div
+                            aria-hidden={copy === 1 ? "true" : undefined}
+                            class:list={[
+                                "logo-group",
+                                row.reverse && "logo-group--reverse",
+                            ]}
+                        >
+                            {row.logos.map((logo) => (
+                                <div
+                                    class:list={[
+                                        "logo-container",
+                                        logo.onDark && "logo-container--dark",
+                                    ]}
+                                >
+                                    <img
+                                        class:list={[
+                                            "item-logo",
+                                            row.large && "item-logo--large",
+                                            logo.onWhite && "item-logo--on-white",
+                                        ]}
+                                        src={logo.src}
+                                        alt={copy === 1 ? "" : logo.alt}
+                                        loading="lazy"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    ))}
                 </div>
             </div>
-            <div aria-hidden class="group flex items-center h-50">
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={havannaLogo.src}
-                        alt="Havanna"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={naranjaxLogo.src}
-                        alt="NaranjaX"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={naldoLogo.src}
-                        alt="Naldo"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={articoLogo.src}
-                        alt="Artico"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={mercadoPuertoLogo.src}
-                        alt="Mercado Puerto"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={edeaLogo.src}
-                        alt="Edea"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={raffeLogo.src}
-                        alt="Raffe"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={frioPolarLogo.src}
-                        alt="Frío Polar"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={pintureriasCentroLogo.src}
-                        alt="Pinturerías Centro"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={openSportLogo.src}
-                        alt="Open Sport"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={coppensLogo.src}
-                        alt="Coppens"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={favaLogo.src}
-                        alt="Fava"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={floridaOutletLogo.src}
-                        alt="Florida Outlet"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={laCasianaLogo.src}
-                        alt="La Casiana"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={panacityLogo.src}
-                        alt="Panacity"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={altoConstitucionLogo.src}
-                        alt="Alto Constitución"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo logo-grande"
-                        src={paladiniLogo.src}
-                        alt="Paladini"
-                    />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Segunda fila - Logos de "medio" -->
-    <div class="wrapper-medio my-10">
-        <div class="carousel">
-            <div class="group-reverse flex items-center h-50">
-                <div class="logo-container">
-                    <img class="item-logo" src={pumaLogo.src} alt="Puma" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={lacosteLogoMedio.src}
-                        alt="Lacoste"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={tiendaLeonLogoMedio.src}
-                        alt="Tienda León"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={cafeMartinezLogoMedio.src}
-                        alt="Café Martínez"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={andreaniLogoMedio.src}
-                        alt="Andreani"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={sacoaLogoMedio.src}
-                        alt="Sacoa"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={montecatiniLogoMedio.src}
-                        alt="Montecatini"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={clubMilaLogo.src}
-                        alt="Club Milanesa"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={tripLogo.src} alt="Trip" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={pampaLogo.src}
-                        alt="Pampa Novillo"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={centrosiderLogo.src}
-                        alt="Centrosider"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={altoConstitucionLogo.src}
-                        alt="Alto Constitución"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={feriaIndependenciaLogo.src}
-                        alt="Feria Independencia"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={laPrimeraCafeLogo.src}
-                        alt="La Primera Café"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={sullairLogo.src}
-                        alt="Sullair"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={beniplastLogo.src}
-                        alt="Beniplast"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={arohaLogo.src} alt="Aroha" />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={mrFlyLogo.src} alt="Mr Fly" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={terrazasLogo.src}
-                        alt="Terrazas Balneario"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={alicanteBalnearioLogo.src}
-                        alt="Alicante Balneario"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={alfonsinaBalnearioLogo.src}
-                        alt="Puma"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={cripLogo.src} alt="Lacoste" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={camaronBrujoLogo.src}
-                        alt="Tienda León"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={ardapezLogo.src}
-                        alt="Café Martínez"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={syngentaLogo.src}
-                        alt="Andreani"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={elRodeoLogo.src} alt="Sacoa" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={antoniucciLogo.src}
-                        alt="Montecatini"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={lindeLogo.src}
-                        alt="Club Milanesa"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo item-logo-background"
-                        src={yachtClubLogo.src}
-                        alt="Trip"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={golfClubLogo.src}
-                        alt="Pampa Novillo"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={nikroLogo.src}
-                        alt="Centrosider"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={ambitoLogo.src}
-                        alt="Alto Constitución"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={mercedinoLogo.src}
-                        alt="Feria Independencia"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={multiEnvasesLogo.src}
-                        alt="La Primera Café"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={carnicosLogo.src}
-                        alt="Sullair"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={baguetteLogo.src}
-                        alt="Beniplast"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={comarLogo.src} alt="Aroha" />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={baumLogo.src} alt="Mr Fly" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={rinconDulceLogo.src}
-                        alt="Terrazas Balneario"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={laCuadraLogo.src}
-                        alt="La Cuadra"
-                    />
-                </div>
-            </div>
-            <div aria-hidden class="group-reverse flex items-center h-50">
-                <div class="logo-container">
-                    <img class="item-logo" src={pumaLogo.src} alt="Puma" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={lacosteLogoMedio.src}
-                        alt="Lacoste"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={tiendaLeonLogoMedio.src}
-                        alt="Tienda León"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={cafeMartinezLogoMedio.src}
-                        alt="Café Martínez"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={andreaniLogoMedio.src}
-                        alt="Andreani"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={sacoaLogoMedio.src}
-                        alt="Sacoa"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={montecatiniLogoMedio.src}
-                        alt="Montecatini"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={clubMilaLogo.src}
-                        alt="Club Milanesa"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={tripLogo.src} alt="Trip" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={pampaLogo.src}
-                        alt="Pampa Novillo"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={centrosiderLogo.src}
-                        alt="Centrosider"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={altoConstitucionLogo.src}
-                        alt="Alto Constitución"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={feriaIndependenciaLogo.src}
-                        alt="Feria Independencia"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={laPrimeraCafeLogo.src}
-                        alt="La Primera Café"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={sullairLogo.src}
-                        alt="Sullair"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={beniplastLogo.src}
-                        alt="Beniplast"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={arohaLogo.src} alt="Aroha" />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={mrFlyLogo.src} alt="Mr Fly" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={terrazasLogo.src}
-                        alt="Terrazas Balneario"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={alicanteBalnearioLogo.src}
-                        alt="Alicante Balneario"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={alfonsinaBalnearioLogo.src}
-                        alt="Puma"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={cripLogo.src} alt="Lacoste" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={camaronBrujoLogo.src}
-                        alt="Tienda León"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={ardapezLogo.src}
-                        alt="Café Martínez"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={syngentaLogo.src}
-                        alt="Andreani"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={elRodeoLogo.src} alt="Sacoa" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={antoniucciLogo.src}
-                        alt="Montecatini"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={lindeLogo.src}
-                        alt="Club Milanesa"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo item-logo-background"
-                        src={yachtClubLogo.src}
-                        alt="Trip"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={golfClubLogo.src}
-                        alt="Pampa Novillo"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={nikroLogo.src}
-                        alt="Centrosider"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={ambitoLogo.src}
-                        alt="Alto Constitución"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={mercedinoLogo.src}
-                        alt="Feria Independencia"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={multiEnvasesLogo.src}
-                        alt="La Primera Café"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={carnicosLogo.src}
-                        alt="Sullair"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={baguetteLogo.src}
-                        alt="Beniplast"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={comarLogo.src} alt="Aroha" />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={baumLogo.src} alt="Mr Fly" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={rinconDulceLogo.src}
-                        alt="Terrazas Balneario"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={laCuadraLogo.src}
-                        alt="La Cuadra"
-                    />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tercera fila - Logos de "abajo" -->
-    <div class="wrapper-abajo">
-        <div class="carousel">
-            <div class="group flex items-center h-50">
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={torreonLogo.src}
-                        alt="Torreón del Monje"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={i47streetLogo.src}
-                        alt="47 Street"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={ripsaLogo.src} alt="Ripsa" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={zanellaLogo.src}
-                        alt="Zanella"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={mayoristaSotoLogo.src}
-                        alt="Mayorista Soto"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={campoVerdeLogo.src}
-                        alt="Campo Verde"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={santulliLogo.src}
-                        alt="Santulli"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={libreriaLuroLogo.src}
-                        alt="Librería Luro"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={smataLogo.src} alt="SMATA" />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={utaLogo.src} alt="UTA" />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={alitoLogo.src} alt="Alito" />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={texanoLogo.src} alt="Texano" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={luzYFuerzaLogo.src}
-                        alt="Luz y Fuerza"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={colegioNacionesUnidasLogo.src}
-                        alt="Colegio Naciones Unidas"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={mercantilAndinaLogo.src}
-                        alt="Mercantil Andina"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={mastromarinoLogo.src}
-                        alt="Mastromarino"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={matafuegosMarplatenseLogo.src}
-                        alt="Matafuegos Marplatense"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={matafuegosMarDelPlataLogo.src}
-                        alt="Matafuegos Mar del Plata"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={gymFlex.src} alt="Flex Gym" />
-                </div>
-            </div>
-
-            <div class="group flex items-center h-50">
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={torreonLogo.src}
-                        alt="Torreón del Monje"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={i47streetLogo.src}
-                        alt="47 Street"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={ripsaLogo.src} alt="Ripsa" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={zanellaLogo.src}
-                        alt="Zanella"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={mayoristaSotoLogo.src}
-                        alt="Mayorista Soto"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={campoVerdeLogo.src}
-                        alt="Campo Verde"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={santulliLogo.src}
-                        alt="Santulli"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={libreriaLuroLogo.src}
-                        alt="Librería Luro"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={smataLogo.src} alt="SMATA" />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={utaLogo.src} alt="UTA" />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={alitoLogo.src} alt="Alito" />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={texanoLogo.src} alt="Texano" />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={luzYFuerzaLogo.src}
-                        alt="Luz y Fuerza"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={colegioNacionesUnidasLogo.src}
-                        alt="Colegio Naciones Unidas"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={mercantilAndinaLogo.src}
-                        alt="Mercantil Andina"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={mastromarinoLogo.src}
-                        alt="Mastromarino"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={matafuegosMarplatenseLogo.src}
-                        alt="Matafuegos Marplatense"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img
-                        class="item-logo"
-                        src={matafuegosMarDelPlataLogo.src}
-                        alt="Matafuegos Mar del Plata"
-                    />
-                </div>
-                <div class="logo-container">
-                    <img class="item-logo" src={gymFlex.src} alt="Flex Gym" />
-                </div>
-            </div>
-        </div>
-    </div>
+        ))
+    }
 </section>
 
 <style scoped>
-    /* Estilos comunes */
-
-    .carousel {
-        margin: 0 auto;
-        padding: 20px 0;
-        max-width: 100%;
-        overflow: hidden;
-        display: flex;
-        > * {
-            flex: 0 0 100%;
-        }
-        &:hover .group,
-        &:hover .group-reverse {
-            animation-play-state: paused;
-        }
-    }
-
-    .group {
-        display: flex;
-        gap: 20px;
-        /* Add padding to the right to create a gap between the last and first card. */
-        padding-right: 20px;
-        will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
-        animation: scrolling 30s linear infinite;
-    }
-
-    .group-reverse {
-        display: flex;
-        gap: 20px;
-        /* Add padding to the right to create a gap between the last and first card. */
-        padding-left: 20px;
-        will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
-        animation: scrolling-reverse 60s linear infinite;
-    }
-
-    @keyframes scrolling {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-
-    @keyframes scrolling-reverse {
-        0% {
-            transform: translateX(-100%);
-        }
-        100% {
-            transform: translateX(0);
-        }
-    }
-    .wrapper-arriba,
-    .wrapper-medio,
-    .wrapper-abajo {
-        margin-inline: auto;
+    .logo-row {
         position: relative;
         overflow: hidden;
         background-color: color-mix(
@@ -1142,13 +235,76 @@ import matafuegosMarDelPlataLogo from "../assets/clients_logos/abajo/matafuergos
         );
     }
 
-    /* Estilos específicos para cada fila */
-    .wrapper-arriba {
-        background-color: color-mix(
-            in srgb,
-            var(--color-brand-primary) 15%,
-            transparent
-        );
+    .logo-row--medio {
+        margin-block: 2.5rem;
+    }
+
+    .carousel {
+        display: flex;
+        margin: 0 auto;
+        padding: 20px 0;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .carousel > * {
+        flex: 0 0 100%;
+    }
+
+    .carousel:hover .logo-group,
+    .carousel:focus-within .logo-group {
+        animation-play-state: paused;
+    }
+
+    .logo-group {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-right: 20px;
+        animation: scrolling 30s linear infinite;
+    }
+
+    .logo-group--reverse {
+        padding-right: 0;
+        padding-left: 20px;
+        animation-name: scrolling-reverse;
+        animation-duration: 60s;
+    }
+
+    @keyframes scrolling {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes scrolling-reverse {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    .logo-container {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-container--dark {
+        gap: 20px;
+        width: 13rem;
+        height: 6rem;
+        padding: 0 2rem;
+        border: 1px solid var(--color-border-light);
+        border-radius: 0.5rem;
+        background-color: var(--color-surface-dark);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
 
     .item-logo {
@@ -1157,14 +313,26 @@ import matafuegosMarDelPlataLogo from "../assets/clients_logos/abajo/matafuergos
         object-fit: contain;
     }
 
-    .item-logo-background {
-        background-color: white !important;
+    .item-logo--large {
+        max-width: 300px;
+        max-height: 100px;
+    }
+
+    .item-logo--on-white {
+        background-color: #ffffff;
         padding: 5px;
     }
 
-    /* Logos más grandes para la primera fila (arriba) */
-    .logo-grande {
-        max-width: 300px !important;
-        max-height: 100px !important;
+    @media (prefers-reduced-motion: reduce) {
+        .carousel {
+            overflow-x: auto;
+            scrollbar-width: thin;
+        }
+        .logo-group {
+            animation: none;
+        }
+        .logo-group[aria-hidden="true"] {
+            display: none;
+        }
     }
 </style>

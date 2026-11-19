@@ -1,25 +1,22 @@
 ---
-// WhatsAppButton.astro
-const contact = {
-  name: "Jorge Toledo",
-  number: "5492235322443",
-  message: "Hola, me interesa realizar una gestión!"
-};
-const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(contact.message)}`;
+import { site } from "../config/site";
+
+const { name, phone } = site.contact;
+const message = "Hola, me interesa realizar una gestión!";
+const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 ---
-<a 
-  href={whatsappUrl} 
-  class="whatsapp-btn" 
-  target="_blank" 
+
+<a
+  href={whatsappUrl}
+  class="whatsapp-btn"
+  target="_blank"
   rel="noopener noreferrer"
-  aria-label={`Contactar a ${contact.name} por WhatsApp`}
+  aria-label={`Contactar a ${name} por WhatsApp`}
 >
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
 <style>
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
-
   .whatsapp-btn {
     position: fixed;
     bottom: 20px;
@@ -37,12 +34,26 @@ const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(c
     border: none;
     cursor: pointer;
     z-index: 999;
-    transition: transform 0.2s ease-in-out;
     text-decoration: none;
+    transition:
+      transform 160ms var(--ease-out),
+      box-shadow 160ms ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .whatsapp-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.35);
+    }
   }
 
   .whatsapp-btn:active {
-    transform: scale(0.95);
+    transform: scale(0.97);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .whatsapp-btn {
+      transition: box-shadow 150ms ease;
+    }
   }
 </style>
-

@@ -1,98 +1,141 @@
-<section id="inicio" class="w-full h-screen text-white bg-hero bg-no-repeat">
-   <div class="absolute inset-0 flex items-center justify-center p-4">
-      <div
-         class="text-center flex flex-col items-center justify-center gap-3 md:gap-5"
-      >
-         <!-- <span
-            class="animate__animated animate__fadeInDown animate__fast group relative inline-flex max-w-[115px] cursor-pointer items-center gap-2 overflow-hidden whitespace-nowrap rounded-full border bg-gradient-to-r from-brand-primary to-brand-accent px-4 py-1.5 text-sm font-semibold text-white shadow-lg shadow-brand-primary/25 transition-all duration-500 hover:max-w-[520px]"
-         >
-            <span
-               class="animate-shimmer absolute inset-y-0 -left-20 w-10 -skew-x-12 bg-white/30 blur-sm"
-            ></span>
-            <i class="shrink-0 fa-solid fa-medal"></i>
-            <span class="shrink-0 flex items-center justify-center gap-1"
-               ><i class="fa-solid fa-plus text-[10px]"></i>20 años</span
+<section id="inicio" class="bg-hero relative w-full min-h-[100dvh] text-white">
+    <div class="absolute inset-0 z-10 flex items-center justify-center p-4">
+        <div
+            class="text-center flex flex-col items-center justify-center gap-3 md:gap-5"
+        >
+            <h1
+                class="hero-reveal text-white text-5xl lg:text-7xl leading-tight tracking-tight font-bold drop-shadow-[0_4px_10px_rgba(0,0,0,0.35)]"
+                style="--reveal-delay: 0ms"
             >
+                Toledo, Moreno
+                <span class="block text-brand-light"> & Asoc. </span>
+            </h1>
 
-            <span
-               class="translate-x-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+            <p
+                class="hero-reveal mt-5 text-lg leading-relaxed text-white/90 lg:text-xl drop-shadow-[0_3px_5px_rgba(0,0,0,0.35)]"
+                style="--reveal-delay: 40ms"
             >
-               acompañando en procesos de habilitación
-            </span>
-         </span> -->
-
-         <h1
-            class="animate__animated animate__fadeInUp animate__fast text-white text-5xl lg:text-7xl leading-tight tracking-tight font-bold drop-shadow-[0_4px_10px_rgba(0,0,0,0.35)]"
-         >
-            Toledo, Moreno
-            <span class="block text-brand-light"> & Asoc. </span>
-         </h1>
-
-         <p
-            class="animate__animated animate__fadeInUp animate__fast mt-5 text-lg leading-relaxed text-white/90 lg:text-xl drop-shadow-[0_3px_5px_rgba(0,0,0,0.35)]"
-         >
-            Especialistas en la Gestión de
-            <span class="font-semibold">
-               Habilitaciones Comerciales, Industriales y Cartelería
-            </span>
-            .
-         </p>
-         <p
-            class="animate__animated animate__fadeInUp animate__fast max-w-2xl font-cookie text-3xl font-medium text-white/90 md:text-5xl drop-shadow-[0_3px_5px_rgba(0,0,0,0.35)]"
-         >
-            "Si vas a invertir, invertí también en hacerlo bien desde el
-            inicio…"
-         </p>
-         <div
-            class="animate__animated animate__fadeInUp animate__fast flex flex-col sm:flex-row gap-4 justify-center"
-         >
-            <a
-               href="#contacto"
-               class="group relative inline-flex items-center justify-center gap-3 bg-brand-light px-8 py-4 rounded text-white font-button text-button transition-colors duration-300 hover:bg-brand-hover"
+                Especialistas en la Gestión de
+                <span class="font-semibold">
+                    Habilitaciones Comerciales, Industriales y Cartelería
+                </span>
+                .
+            </p>
+            <p
+                class="hero-reveal max-w-2xl font-cookie text-3xl font-medium text-white/90 md:text-5xl drop-shadow-[0_3px_5px_rgba(0,0,0,0.35)]"
+                style="--reveal-delay: 80ms"
             >
-               <span>Comenzar Gestión</span>
-
-               <span
-                  class="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-white/80 transition-all duration-300 group-hover:w-4/5"
-               ></span>
-            </a>
-            <a
-               href="#proceso"
-               class="group relative inline-flex items-center justify-center gap-3 bg-brand-light px-8 py-4 rounded text-white font-button text-button transition-colors duration-300 hover:bg-brand-hover"
+                "Si vas a invertir, invertí también en hacerlo bien desde el
+                inicio…"
+            </p>
+            <div
+                class="hero-reveal flex flex-col sm:flex-row gap-4 justify-center"
+                style="--reveal-delay: 120ms"
             >
-               <span>Conocer Método</span>
-
-               <span
-                  class="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-white/80 transition-all duration-300 group-hover:w-4/5"
-               ></span>
-            </a>
-         </div>
-      </div>
-   </div>
+                <a
+                    href="#contacto"
+                    class="hero-cta hero-cta--primary relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded font-semibold"
+                >
+                    <span>Comenzar Gestión</span>
+                    <span class="hero-cta-line absolute bottom-0 left-1/2 h-[2px] w-4/5 bg-white/80"></span>
+                </a>
+                <a
+                    href="#proceso"
+                    class="hero-cta hero-cta--secondary relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded font-semibold"
+                >
+                    <span>Conocer Método</span>
+                    <span class="hero-cta-line absolute bottom-0 left-1/2 h-[2px] w-4/5 bg-white/80"></span>
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <style>
-   .bg-hero {
-      background:
-         linear-gradient(
-            to right,
-            rgba(26, 32, 44, 0.9),
-            rgba(26, 32, 44, 0.4)
-         ),
-         url("../assets/bg-4.jpg");
+    .bg-hero {
+        position: relative;
+        isolation: isolate;
+    }
 
-      mix-blend-mode: multiply;
-   }
-   @keyframes shimmer {
-      0% {
-         left: -45%;
-      }
-      100% {
-         left: 130%;
-      }
-   }
+    .bg-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background:
+            linear-gradient(
+                to right,
+                rgba(26, 32, 44, 0.9),
+                rgba(26, 32, 44, 0.4)
+            ),
+            url("../assets/bg-4.jpg") center / cover no-repeat;
+        mix-blend-mode: multiply;
+    }
 
-   .animate-shimmer {
-      animation: shimmer 2.8s ease-in-out infinite;
-   }
+    .hero-reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        animation: hero-in 500ms var(--ease-out) forwards;
+        animation-delay: var(--reveal-delay, 0ms);
+    }
+
+    @keyframes hero-in {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .hero-cta {
+        transition:
+            transform 160ms var(--ease-out),
+            background-color 160ms ease,
+            border-color 160ms ease;
+    }
+
+    .hero-cta--primary {
+        color: #ffffff;
+        background-color: var(--color-brand-light);
+        border: 1px solid var(--color-brand-light);
+    }
+
+    .hero-cta--secondary {
+        color: #ffffff;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .hero-cta-line {
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        transition: transform 200ms var(--ease-out);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .hero-cta:hover {
+            transform: scale(1.02);
+        }
+        .hero-cta--primary:hover {
+            background-color: var(--color-brand-hover);
+            border-color: var(--color-brand-hover);
+        }
+        .hero-cta--secondary:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+        .hero-cta:hover .hero-cta-line {
+            transform: translateX(-50%) scaleX(1);
+        }
+    }
+
+    .hero-cta:active {
+        transform: scale(0.97);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .hero-reveal {
+            opacity: 1;
+            transform: none;
+            animation: none;
+        }
+    }
 </style>

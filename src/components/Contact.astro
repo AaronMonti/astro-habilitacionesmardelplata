@@ -1,10 +1,12 @@
 ---
-const contact = {
-   name: "Jorge Toledo",
-   number: "5492235322443",
-   message: "Hola, me interesa realizar una gestión!",
-};
-const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(contact.message)}`;
+import { site } from "../config/site";
+
+const { contact } = site;
+const message = "Hola, me interesa realizar una gestión!";
+const whatsappUrl = `https://wa.me/${contact.phone}?text=${encodeURIComponent(message)}`;
+
+const inputClass =
+   "h-12 w-full rounded border border-border-subtle bg-white px-4 text-text-body placeholder-text-muted transition-[border-color,box-shadow] duration-200 ease-out focus:border-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary/25";
 ---
 
 <section class="bg-white py-20" id="contacto">
@@ -51,7 +53,7 @@ const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(c
                   <div class="min-w-0">
                      <p class="font-bold text-text-heading">Teléfonos</p>
 
-                     <p class="text-text-body">(0223) 15-532-2443</p>
+                     <p class="text-text-body">{contact.displayPhone}</p>
 
                      <p class="text-text-body">(0223) 15-564-6847</p>
                   </div>
@@ -65,10 +67,10 @@ const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(c
                      <p class="font-bold text-text-heading">Email</p>
 
                      <a
-                        href="mailto:toledomorenoyasoc@habilitacionesmardelplata.com"
-                        class="text-brand-dark hover:underline"
+                        href={`mailto:${contact.email}`}
+                        class="text-brand-dark transition-colors duration-200 hover:underline"
                      >
-                        toledomorenoyasoc@habilitacionesmardelplata.com
+                        {contact.email}
                      </a>
                   </div>
                </div>
@@ -77,17 +79,21 @@ const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(c
             <!-- Redes -->
             <div class="mt-8 flex gap-4">
                <a
-                  href="https://www.instagram.com/habilitacionesmardelplata/"
+                  href={contact.instagram}
                   target="_blank"
-                  class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-muted text-text-body transition hover:text-brand-dark"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  class="contact-social contact-social--instagram flex h-10 w-10 items-center justify-center rounded-full bg-surface-muted text-text-body"
                >
                   <i class="fa-brands fa-instagram text-lg"></i>
                </a>
 
                <a
-                  href="https://www.linkedin.com/company/habilitaciones-mar-del-plata/"
+                  href={contact.linkedin}
                   target="_blank"
-                  class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-muted text-text-body transition hover:text-brand-dark"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  class="contact-social contact-social--linkedin flex h-10 w-10 items-center justify-center rounded-full bg-surface-muted text-text-body"
                >
                   <i class="fa-brands fa-linkedin-in text-lg"></i>
                </a>
@@ -95,8 +101,9 @@ const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(c
                <a
                   href={whatsappUrl}
                   target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={`Contactar a ${contact.name} por WhatsApp`}
-                  class="flex h-10 w-10 items-center justify-center rounded-full bg-success/10 text-success transition hover:bg-success hover:text-white"
+                  class="contact-social contact-social--whatsapp flex h-10 w-10 items-center justify-center rounded-full bg-success/10 text-success"
                >
                   <i class="fa-brands fa-whatsapp text-lg"></i>
                </a>
@@ -105,8 +112,8 @@ const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(c
 
          <!-- Formulario -->
          <div class="w-full rounded-lg bg-surface-muted p-6 lg:p-10">
-            <form id="contactForm" class="flex flex-col gap-4">
-               <div class="relative">
+            <form id="contactForm" class="flex flex-col gap-4" novalidate>
+               <div>
                   <label
                      class="mb-1 block text-sm font-medium text-text-heading"
                      for="name"
@@ -118,15 +125,18 @@ const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(c
                      id="name"
                      name="name"
                      type="text"
+                     autocomplete="name"
                      placeholder="Nombre"
                      required
-                     class="h-12 w-full rounded border border-border-subtle bg-white px-4 text-text-body placeholder-text-muted outline-none transition focus:border-brand-dark"
+                     aria-describedby="name-error"
+                     aria-invalid="false"
+                     class={inputClass}
                   />
 
-                  <div class="error-message hidden text-sm text-red-500"></div>
+                  <p id="name-error" class="field-error" aria-live="polite"></p>
                </div>
 
-               <div class="relative">
+               <div>
                   <label
                      class="mb-1 block text-sm font-medium text-text-heading"
                      for="email"
@@ -138,15 +148,18 @@ const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(c
                      id="email"
                      name="email"
                      type="email"
+                     autocomplete="email"
                      placeholder="Email"
                      required
-                     class="h-12 w-full rounded border border-border-subtle bg-white px-4 text-text-body placeholder-text-muted outline-none transition focus:border-brand-dark"
+                     aria-describedby="email-error"
+                     aria-invalid="false"
+                     class={inputClass}
                   />
 
-                  <div class="error-message hidden text-sm text-red-500"></div>
+                  <p id="email-error" class="field-error" aria-live="polite"></p>
                </div>
 
-               <div class="relative">
+               <div>
                   <label
                      class="mb-1 block text-sm font-medium text-text-heading"
                      for="phone"
@@ -158,12 +171,15 @@ const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(c
                      id="phone"
                      name="phone"
                      type="tel"
+                     autocomplete="tel"
                      placeholder="Teléfono"
                      required
-                     class="h-12 w-full rounded border border-border-subtle bg-white px-4 text-text-body placeholder-text-muted outline-none transition focus:border-brand-dark"
+                     aria-describedby="phone-error"
+                     aria-invalid="false"
+                     class={inputClass}
                   />
 
-                  <div class="error-message hidden text-sm text-red-500"></div>
+                  <p id="phone-error" class="field-error" aria-live="polite"></p>
                </div>
 
                <div>
@@ -179,18 +195,28 @@ const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(c
                      name="message"
                      placeholder="Mensaje"
                      required
-                     class="h-32 w-full rounded border border-border-subtle bg-white p-4 text-text-body placeholder-text-muted outline-none transition focus:border-brand-dark"
+                     aria-describedby="message-error"
+                     aria-invalid="false"
+                     class="h-32 w-full resize-y rounded border border-border-subtle bg-white p-4 text-text-body placeholder-text-muted transition-[border-color,box-shadow] duration-200 ease-out focus:border-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary/25"
                   ></textarea>
+
+                  <p id="message-error" class="field-error" aria-live="polite"></p>
                </div>
 
                <button
+                  id="submitButton"
                   type="submit"
-                  class="h-12 w-full rounded bg-brand-dark text-sm font-semibold text-white shadow-sm transition hover:bg-brand-divider"
+                  class="submit-btn h-12 w-full rounded bg-brand-dark text-sm font-semibold text-white shadow-sm"
                >
                   Enviar Mensaje
                </button>
 
-               <div id="formMessage" class="mt-4 hidden text-center"></div>
+               <p
+                  id="formMessage"
+                  class="min-h-5 text-center text-sm text-gray-500"
+                  role="status"
+                  aria-live="polite"
+               ></p>
             </form>
          </div>
       </div>
@@ -198,81 +224,167 @@ const whatsappUrl = `https://wa.me/${contact.number}?text=${encodeURIComponent(c
 </section>
 
 <script>
-   document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("contactForm");
-      const formMessage = document.getElementById("formMessage");
+   const form = document.getElementById("contactForm") as HTMLFormElement | null;
+   const formMessage = document.getElementById("formMessage");
+   const submitButton = document.getElementById("submitButton") as HTMLButtonElement | null;
 
-      form?.addEventListener("submit", async (e) => {
-         e.preventDefault();
+   if (form && formMessage) {
+      const fields = Array.from(
+         form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>("[name]"),
+      );
+      let isSubmitting = false;
 
-         const formData = new FormData(e.target as HTMLFormElement);
+      const messageTone: Record<string, string> = {
+         pending: "text-gray-500",
+         success: "text-green-600",
+         error: "text-red-600",
+      };
 
-         try {
-            formMessage!.textContent = "Enviando mensaje...";
-            formMessage!.classList.remove(
-               "hidden",
-               "text-red-500",
-               "text-green-500",
-            );
-            formMessage!.classList.add("text-gray-500");
+      function setMessage(text: string, tone: keyof typeof messageTone | "idle") {
+         if (!formMessage) return;
+         formMessage.textContent = text;
+         formMessage.className = `min-h-5 text-center text-sm ${
+            tone === "idle" ? "text-gray-500" : messageTone[tone]
+         }`;
+      }
 
-            const response = await fetch("sendmail.php", {
-               method: "POST",
-               body: formData,
-            });
+      const validators: Record<string, (value: string) => string> = {
+         name: (value) => (value.trim().length >= 2 ? "" : "Ingrese su nombre."),
+         email: (value) =>
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())
+               ? ""
+               : "Ingrese un email válido.",
+         phone: (value) =>
+            value.replace(/\D/g, "").length >= 8
+               ? ""
+               : "Ingrese un teléfono válido.",
+         message: (value) =>
+            value.trim().length >= 10
+               ? ""
+               : "Ingrese un mensaje de al menos 10 caracteres.",
+      };
 
-            const result = await response.json();
+      function validateField(field: HTMLInputElement | HTMLTextAreaElement) {
+         const error = document.getElementById(`${field.name}-error`);
+         const message = validators[field.name]?.(field.value) ?? "";
 
-            if (result.success) {
-               formMessage!.textContent = "¡Mensaje enviado con éxito!";
-               formMessage!.classList.remove(
-                  "hidden",
-                  "text-red-500",
-                  "text-gray-500",
-               );
-               formMessage!.classList.add("text-green-500");
-               (e.target as HTMLFormElement).reset();
-            } else {
-               throw new Error(result.error || "Error al enviar el mensaje");
-            }
-         } catch (error: any) {
-            console.error("Error completo:", error);
-            let errorMessage =
-               "Error al enviar el mensaje. Por favor, intente nuevamente.";
+         if (error) error.textContent = message;
+         field.setAttribute("aria-invalid", String(Boolean(message)));
+         return !message;
+      }
 
-            if (error.message) {
-               errorMessage = `Error: ${error.message}`;
-            }
+      function clearField(field: HTMLInputElement | HTMLTextAreaElement) {
+         const error = document.getElementById(`${field.name}-error`);
+         if (error) error.textContent = "";
+         field.setAttribute("aria-invalid", "false");
+      }
 
-            formMessage!.textContent = errorMessage;
-            formMessage!.classList.remove(
-               "hidden",
-               "text-green-500",
-               "text-gray-500",
-            );
-            formMessage!.classList.add("text-red-500");
+      fields.forEach((field) => {
+         field.addEventListener("input", () => clearField(field));
+      });
+
+      form.addEventListener("submit", async (event) => {
+         event.preventDefault();
+         if (isSubmitting) return;
+
+         const isValid = fields.map(validateField).every(Boolean);
+         if (!isValid) {
+            setMessage("Revise los campos marcados.", "error");
+            fields.find((field) => field.getAttribute("aria-invalid") === "true")?.focus();
+            return;
          }
 
-         formMessage!.classList.remove("hidden");
+         isSubmitting = true;
+         submitButton?.setAttribute("disabled", "");
+         submitButton?.setAttribute("aria-busy", "true");
+         setMessage("Enviando mensaje...", "pending");
+
+         try {
+            const response = await fetch("sendmail.php", {
+               method: "POST",
+               body: new FormData(form),
+            });
+
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+            const result = (await response.json()) as {
+               success?: boolean;
+               error?: string;
+            };
+            if (!result.success) {
+               throw new Error(result.error ?? "No se pudo enviar el mensaje.");
+            }
+
+            setMessage("¡Mensaje enviado con éxito!", "success");
+            form.reset();
+            fields.forEach(clearField);
+         } catch {
+            setMessage(
+               "No se pudo enviar el mensaje. Intente nuevamente o contáctenos por WhatsApp.",
+               "error",
+            );
+         } finally {
+            isSubmitting = false;
+            submitButton?.removeAttribute("disabled");
+            submitButton?.removeAttribute("aria-busy");
+         }
       });
-   });
+   }
 </script>
 
 <style>
-   input[type="radio"]:checked::after {
-      content: "\f00c";
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      position: absolute;
-      color: white;
-      font-size: 12px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+   .field-error {
+      min-height: 1rem;
+      margin-top: 0.25rem;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      color: #dc2626;
    }
 
-   input:focus,
-   textarea:focus {
-      border-color: var(--color-brand-primary);
+   .contact-social,
+   .submit-btn {
+      transition:
+         transform 160ms var(--ease-out),
+         background-color 160ms ease,
+         color 160ms ease;
+   }
+
+   @media (hover: hover) and (pointer: fine) {
+      .contact-social:hover {
+         transform: scale(1.05);
+      }
+      .contact-social--instagram:hover {
+         color: #ffffff;
+         background-color: var(--color-instagram);
+      }
+      .contact-social--linkedin:hover {
+         color: #ffffff;
+         background-color: var(--color-linkedin);
+      }
+      .contact-social--whatsapp:hover {
+         color: #ffffff;
+         background-color: var(--color-success);
+      }
+      .submit-btn:hover {
+         background-color: var(--color-brand-divider);
+         transform: scale(1.01);
+      }
+   }
+
+   .contact-social:active,
+   .submit-btn:active {
+      transform: scale(0.97);
+   }
+
+   .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: wait;
+   }
+
+   @media (prefers-reduced-motion: reduce) {
+      .contact-social,
+      .submit-btn {
+         transition: background-color 150ms ease, color 150ms ease;
+      }
    }
 </style>

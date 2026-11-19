@@ -1,136 +1,152 @@
+---
+const steps = [
+    {
+        number: 1,
+        icon: "fa-magnifying-glass",
+        tone: "brand",
+        title: "Análisis de situación",
+        text: "Análisis inicial de viabilidad y requisitos específicos para su rubro y ubicación.",
+        highlight: "",
+    },
+    {
+        number: 2,
+        icon: "fa-file-lines",
+        tone: "brand",
+        title: "Propuesta de trabajo y presupuestación",
+        text: "Presentamos el alcance del servicio, los plazos y el presupuesto para su aprobación.",
+        highlight: "",
+    },
+    {
+        number: 3,
+        icon: "fa-folder-open",
+        tone: "brand",
+        title: "Armado de legajo y ajustes preventivos antes de la presentación",
+        text: "Preparamos la documentación y verificamos el cumplimiento de los requisitos antes de presentar el trámite.",
+        highlight: "",
+    },
+    {
+        number: 4,
+        icon: "fa-clipboard-check",
+        tone: "success",
+        title: "Inicio de trámite y seguimiento hasta su finalización",
+        text: "Gestionamos el trámite y realizamos el seguimiento hasta la obtención del ",
+        highlight: "Certificado de Habilitación",
+    },
+];
+---
+
 <section class="bg-surface-light py-20" id="proceso">
-   <div class="mx-auto max-w-[1200px] px-6">
-      <div class="mb-16 text-center">
-         <h2 class="mb-4 text-3xl font-bold leading-[1.3] text-text-heading">
-            Nuestro método
-         </h2>
+    <div class="mx-auto max-w-[1200px] px-6">
+        <div class="mb-16 text-center">
+            <h2 class="mb-4 text-3xl font-bold leading-[1.3] text-text-heading">
+                Nuestro método
+            </h2>
 
-         <div class="mx-auto mb-6 h-1 w-16 rounded bg-brand-divider"></div>
+            <div class="mx-auto mb-6 h-1 w-16 rounded bg-brand-divider"></div>
 
-         <div class="mx-auto max-w-3xl rounded-lg p-4 text-center">
-            <div class="mx-auto max-w-2xl py-2">
-               <p
-                  class="text-lg font-semibold leading-tight text-text-heading md:text-2xl"
-               >
-                  "Sí, el trámite es
-                  <span class="text-brand-dark">sencillo</span>. Lo complejo es
-                  que salga
-                  <span class="font-bold text-brand-dark">bien</span>,
-                  <span class="font-bold text-brand-dark">rápido</span>
-                  y sin
-                  <span class="font-bold text-brand-dark">complicaciones</span
-                  >."
-               </p>
+            <div class="mx-auto max-w-3xl rounded-lg p-4 text-center">
+                <div class="mx-auto max-w-2xl py-2">
+                    <p
+                        class="text-lg font-semibold leading-tight text-text-heading md:text-2xl"
+                    >
+                        "Sí, el trámite es
+                        <span class="text-brand-dark">sencillo</span>. Lo complejo es
+                        que salga
+                        <span class="font-bold text-brand-dark">bien</span>,
+                        <span class="font-bold text-brand-dark">rápido</span>
+                        y sin
+                        <span class="font-bold text-brand-dark">complicaciones</span
+                        >."
+                    </p>
+                </div>
             </div>
-         </div>
-      </div>
+        </div>
 
-      <div class="grid gap-8 md:grid-cols-4">
-         <!-- Paso 1 -->
-         <div
-            class="relative rounded-lg bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-         >
-            <div
-               class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-dark/10 text-brand-dark"
-            >
-               <i class="fa-solid fa-magnifying-glass text-3xl"></i>
-            </div>
+        <div class="grid gap-8 md:grid-cols-4">
+            {
+                steps.map((step, index) => (
+                    <article
+                        class="step-card relative rounded-lg bg-white p-8 text-center"
+                        style={`--step-delay: ${index * 60}ms`}
+                    >
+                        <div
+                            class:list={[
+                                "mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full",
+                                step.tone === "success"
+                                    ? "bg-success/10 text-success"
+                                    : "bg-brand-dark/10 text-brand-dark",
+                            ]}
+                        >
+                            <i class={`fa-solid ${step.icon} text-3xl`}></i>
+                        </div>
 
-            <div
-               class="absolute -left-4 -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-brand-dark font-bold text-white"
-            >
-               1
-            </div>
+                        <div
+                            class:list={[
+                                "absolute -left-4 -top-4 flex h-8 w-8 items-center justify-center rounded-full font-bold text-white",
+                                step.tone === "success"
+                                    ? "bg-success"
+                                    : "bg-brand-dark",
+                            ]}
+                        >
+                            {step.number}
+                        </div>
 
-            <h3 class="mb-3 text-xl font-semibold text-text-heading">
-               Analisis de situación
-            </h3>
+                        <h3 class="mb-3 text-xl font-semibold text-text-heading">
+                            {step.title}
+                        </h3>
 
-            <p class="text-base leading-6 text-text-body">
-               Análisis inicial de viabilidad y requisitos específicos para su
-               rubro y ubicación.
-            </p>
-         </div>
-
-         <!-- Paso 2 -->
-         <div
-            class="relative rounded-lg bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-         >
-            <div
-               class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-dark/10 text-brand-dark"
-            >
-               <i class="fa-solid fa-file-lines text-3xl"></i>
-            </div>
-
-            <div
-               class="absolute -left-4 -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-brand-dark font-bold text-white"
-            >
-               2
-            </div>
-
-            <h3 class="mb-3 text-xl font-semibold text-text-heading">
-               Propuesta de trabajo y presupuestacion
-            </h3>
-
-            <p class="text-base leading-6 text-text-body">
-               Presentamos el alcance del servicio, los plazos y el presupuesto
-               para su aprobación.
-            </p>
-         </div>
-
-         <!-- Paso 3 -->
-         <div
-            class="relative rounded-lg bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-         >
-            <div
-               class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-dark/10 text-brand-dark"
-            >
-               <i class="fa-solid fa-folder-open text-3xl"></i>
-            </div>
-
-            <div
-               class="absolute -left-4 -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-brand-dark font-bold text-white"
-            >
-               3
-            </div>
-
-            <h3 class="mb-3 text-xl font-semibold text-text-heading">
-               Armado de legajo y ajustes preventivos antes de la presentación
-            </h3>
-
-            <p class="text-base leading-6 text-text-body">
-               Preparamos la documentación y verificamos el cumplimiento de los
-               requisitos antes de presentar el trámite.
-            </p>
-         </div>
-
-         <!-- Paso 4 -->
-         <div
-            class="relative rounded-lg bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-         >
-            <div
-               class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-success/10 text-success"
-            >
-               <i class="fa-solid fa-clipboard-check text-3xl"></i>
-            </div>
-
-            <div
-               class="absolute -left-4 -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-success font-bold text-white"
-            >
-               4
-            </div>
-
-            <h3 class="mb-3 text-xl font-semibold text-text-heading">
-               Inicio de trámite y seguimiento hasta su finalización
-            </h3>
-
-            <p class="text-base leading-6 text-text-body">
-               Gestionamos el trámite y realizamos el seguimiento hasta la
-               obtención del <span class="font-semibold"
-                  >Certificado de Habilitación</span
-               >.
-            </p>
-         </div>
-      </div>
-   </div>
+                        <p class="text-base leading-6 text-text-body">
+                            {step.text}
+                            {step.highlight && (
+                                <span class="font-semibold">{step.highlight}</span>
+                            )}
+                        </p>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
 </section>
+
+<style>
+    .step-card {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        opacity: 0;
+        animation: step-in 350ms var(--ease-out) forwards;
+        animation-delay: var(--step-delay, 0ms);
+        transition: transform 200ms var(--ease-out);
+    }
+
+    .step-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 200ms ease;
+    }
+
+    @keyframes step-in {
+        to {
+            opacity: 1;
+        }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .step-card:hover {
+            transform: translateY(-4px);
+        }
+        .step-card:hover::before {
+            opacity: 1;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .step-card {
+            opacity: 1;
+            animation: none;
+        }
+    }
+</style>
