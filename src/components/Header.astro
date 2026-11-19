@@ -4,7 +4,7 @@ import "animate.css";
 
 const navLinks = [
     { href: "#inicio", label: "Inicio" },
-    { href: "#proceso", label: "Proceso" },
+    { href: "#proceso", label: "Método" },
     { href: "#nosotros", label: "Nosotros" },
     { href: "#clientes", label: "Clientes" },
     { href: "#contacto", label: "Contacto" },
@@ -16,44 +16,28 @@ const navLinks = [
     class="fixed top-0 left-0 w-full z-50 animate__animated animate__faster"
 >
     <nav class="w-full">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="flex justify-between items-center py-4">
+        <div class="container mx-auto px-2 sm:px-6">
+            <div class="relative flex justify-between items-center py-2">
                 <!-- Logo -->
-                <a href="#inicio" class="flex items-center gap-2.5 shrink-0">
+                <span
+                    class="animate__animated animate__fadeInDown animate__fast relative inline-flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-full border bg-gradient-to-r from-brand-primary to-brand-accent px-4 py-1.5 text-[10px] md:text-[13px] font-semibold text-white shadow-lg shadow-brand-primary/25"
+                >
+                    <!-- Reflejo -->
                     <span
-                        class="logo-wrap flex items-center justify-center w-11 h-11 rounded-full transition-colors duration-300"
-                    >
-                        <svg
-                            class="w-6 h-6"
-                            viewBox="0 0 327.339 327.339"
-                            fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <g>
-                                <path
-                                    d="M197.234,47.994h-67.537c0,95.635-11.786,124.19-24.024,140.687 
-                                    c-12.238,16.491,4.531,27.924,4.531,27.924c25.373,15.708,41.429,71.453,44.698,83.691c-3.726,2.763-6.168,7.152-6.168,12.145 
-                                    c0,7.419,5.336,13.565,12.368,14.876l-0.076-24.595l-0.016-5.151l-0.261-85.66l-14.191-14.191h33.82l-14.185,14.185l0.261,85.638 
-                                    l0.016,5.183l0.076,24.612c7.103-1.256,12.51-7.43,12.51-14.892c0-5.319-2.752-9.981-6.897-12.684 
-                                    c9.159-36.447,32.248-69.446,45.927-82.244c14.049-13.146,5.439-24.356,5.439-24.356 
-                                    C194.965,147.045,197.234,47.994,197.234,47.994z"
-                                ></path>
-                                <path
-                                    d="M124.35,0v12.689h-8.039c-7.636,0-13.826,6.19-13.826,13.826s6.19,13.826,13.826,13.826h95.124 
-                                    c7.636,0,13.826-6.19,13.826-13.826s-6.19-13.826-13.826-13.826H199.48V0H124.35z"
-                                ></path>
-                            </g>
-                        </svg>
-                    </span>
+                        class="animate-shimmer absolute inset-y-0 -left-20 w-10 -skew-x-12 bg-white/30 blur-sm"
+                    ></span>
+                    <i class="shrink-0 fa-solid fa-medal"></i>
                     <span
-                        class="brand-text hidden sm:block font-epilogue font-semibold text-lg tracking-tight transition-colors duration-300"
+                        class="shrink-0 flex items-center justify-center gap-1"
+                        ><i class="fa-solid fa-plus text-[10px]"></i>20 años
+                        acompañando en procesos de Habilitación</span
                     >
-                        Habilitaciones MDP
-                    </span>
-                </a>
+                </span>
 
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex items-center gap-1">
+                <!-- Desktop Menu (centrado en pantalla, independiente del logo/CTA) -->
+                <ul
+                    class="hidden md:flex items-center gap-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                >
                     {
                         navLinks.map((link) => (
                             <li>
@@ -69,13 +53,16 @@ const navLinks = [
                 </ul>
 
                 <!-- Social + CTA (desktop) -->
-                <div class="hidden md:flex items-center gap-3 shrink-0">
+                <div class="hidden md:flex items-center gap-3 shrink-0 ml-auto">
                     <a
                         href="https://www.instagram.com/habilitacionesmardelplata/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram"
-                        class="social-icon flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 hover:bg-instagram hover:text-white hover:scale-110"
+                        class="social-icon flex items-center
+                    justify-center w-9 h-9 rounded-full transition-all
+                    duration-300 hover:bg-instagram hover:text-white
+                    hover:scale-110"
                     >
                         <i class="text-base fa-brands fa-instagram"></i>
                     </a>
@@ -84,13 +71,18 @@ const navLinks = [
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn"
-                        class="social-icon flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 hover:bg-linkedin hover:text-white hover:scale-110"
+                        class="social-icon flex items-center
+                    justify-center w-9 h-9 rounded-full transition-all
+                    duration-300 hover:bg-linkedin hover:text-white
+                    hover:scale-110"
                     >
                         <i class="text-base fa-brands fa-linkedin"></i>
                     </a>
                     <a
                         href="#contacto"
-                        class="cta-btn ml-1 px-4 py-2 rounded text-sm font-semibold font-epilogue border transition-all duration-300 hover:scale-105"
+                        class="cta-btn ml-1 px-4 py-2 rounded text-sm
+                font-semibold font-epilogue border transition-all duration-300
+                hover:scale-105"
                     >
                         Contactanos
                     </a>
@@ -118,275 +110,348 @@ const navLinks = [
                     </svg>
                 </button>
             </div>
+
+            <!-- Mobile Menu -->
+            <div
+                id="mobileMenu"
+                class="hidden md:hidden fixed inset-0 bg-surface-light z-50 animate__animated"
+            >
+                <div class="flex flex-col h-full">
+                    <div class="flex justify-between items-center p-5">
+                        <span
+                            class="font-epilogue font-semibold text-brand-primary text-lg"
+                        >
+                            Habilitaciones MDP
+                        </span>
+                        <button
+                            id="closeMenu"
+                            class="flex items-center justify-center w-10 h-10 bg-brand-primary text-white rounded-full transition-colors"
+                            aria-label="Cerrar menú"
+                        >
+                            <svg
+                                class="w-6 pointer-events-none"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul
+                        class="flex flex-col items-center justify-center flex-1 gap-6 text-2xl -mt-10"
+                    >
+                        {
+                            navLinks.map((link) => (
+                                <li>
+                                    <a
+                                        href={link.href}
+                                        class="nav-link px-4 py-2 font-epilogue font-medium text-text-heading hover:text-brand-primary transition-colors"
+                                    >
+                                        {link.label}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+
+                    <div class="flex justify-center gap-4 pb-10">
+                        <a
+                            href="https://www.instagram.com/habilitacionesmardelplata/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                            class="flex items-center
+                        justify-center w-11 h-11 rounded-full bg-surface-muted
+                        text-brand-primary transition-all duration-300
+                        hover:bg-instagram hover:text-white hover:scale-110"
+                        >
+                            <i class="text-xl fa-brands fa-instagram"></i>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/company/habilitaciones-mar-del-plata/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                            class="flex items-center
+                    justify-center w-11 h-11 rounded-full bg-surface-muted
+                    text-brand-primary transition-all duration-300
+                    hover:bg-linkedin hover:text-white hover:scale-110"
+                        >
+                            <i class="text-xl fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+
+                    <script>
+                        const navbar = document.getElementById("navbar");
+                        const menuButton =
+                            document.getElementById("menuButton");
+                        const closeMenu = document.getElementById("closeMenu");
+                        const mobileMenu =
+                            document.getElementById("mobileMenu");
+                        const mobileMenuLinks =
+                            mobileMenu?.querySelectorAll("a");
+
+                        const SCROLL_THRESHOLD = 40;
+                        let isMenuOpen = false;
+
+                        // Cambia de transparente a blanca al hacer scroll
+                        function updateNavbarState() {
+                            if (window.scrollY > SCROLL_THRESHOLD) {
+                                navbar?.classList.add("scrolled");
+                            } else {
+                                navbar?.classList.remove("scrolled");
+                            }
+                        }
+                        updateNavbarState();
+                        window.addEventListener("scroll", updateNavbarState, {
+                            passive: true,
+                        });
+
+                        // Ocultar al bajar / mostrar al subir (solo cuando el menú móvil está cerrado)
+                        // Ocultar al bajar / mostrar al subir (solo cuando el menú móvil está cerrado)
+                        var prevScrollpos = window.scrollY;
+                        window.addEventListener("scroll", function () {
+                            if (isMenuOpen) return;
+                            if (window.innerWidth < 768) return; // en mobile, el navbar siempre queda visible
+
+                            var currentScrollPos = window.scrollY;
+
+                            if (
+                                prevScrollpos < currentScrollPos &&
+                                currentScrollPos > 200
+                            ) {
+                                navbar?.classList.remove("animate__fadeInDown");
+                                navbar?.classList.add("animate__fadeOutUp");
+                            } else {
+                                navbar?.classList.remove("animate__fadeOutUp");
+                                navbar?.classList.add("animate__fadeInDown");
+                            }
+                            prevScrollpos = currentScrollPos;
+                        });
+
+                        function openMenu() {
+                            isMenuOpen = true;
+                            mobileMenu?.classList.remove(
+                                "hidden",
+                                "animate__fadeOut",
+                            );
+                            mobileMenu?.classList.add("animate__fadeIn");
+                            document.body.classList.add("overflow-hidden");
+                            menuButton?.setAttribute("aria-expanded", "true");
+                        }
+
+                        function closeMenuAnimation() {
+                            isMenuOpen = false;
+                            mobileMenu?.classList.remove("animate__fadeIn");
+                            mobileMenu?.classList.add("animate__fadeOut");
+                            menuButton?.setAttribute("aria-expanded", "false");
+                            document.body.classList.remove("overflow-hidden");
+
+                            setTimeout(() => {
+                                mobileMenu?.classList.add("hidden");
+                                mobileMenu?.classList.remove(
+                                    "animate__fadeOut",
+                                );
+                            }, 300);
+                        }
+
+                        menuButton?.addEventListener("click", openMenu);
+                        closeMenu?.addEventListener(
+                            "click",
+                            closeMenuAnimation,
+                        );
+
+                        mobileMenuLinks?.forEach((link) => {
+                            link.addEventListener("click", () => {
+                                isMenuOpen = false;
+                                document.body.classList.remove(
+                                    "overflow-hidden",
+                                );
+                                mobileMenu?.classList.add("hidden");
+                                mobileMenu?.classList.remove(
+                                    "animate__fadeIn",
+                                    "animate__fadeOut",
+                                );
+                                menuButton?.setAttribute(
+                                    "aria-expanded",
+                                    "false",
+                                );
+                            });
+                        });
+                    </script>
+
+                    <style is:global>
+                        /* Estado por defecto: transparente, texto blanco */
+                        #navbar {
+                            background-color: transparent;
+                            border-bottom: 1px solid transparent;
+                            transition:
+                                background-color 0.35s ease,
+                                box-shadow 0.35s ease,
+                                border-color 0.35s ease;
+                        }
+
+                        #navbar .logo-wrap {
+                            background-color: white;
+                            color: var(--color-brand-primary);
+                        }
+
+                        #navbar .brand-text,
+                        #navbar nav .nav-link,
+                        #navbar .menu-btn {
+                            color: #ffffff;
+                        }
+
+                        #navbar .menu-btn {
+                            background-color: rgba(255, 255, 255, 0.15);
+                        }
+
+                        #navbar .social-icon {
+                            color: #ffffff;
+                            background-color: rgba(255, 255, 255, 0.15);
+                        }
+
+                        #navbar .cta-btn {
+                            color: #ffffff;
+                            border-color: rgba(255, 255, 255, 0.6);
+                            background-color: transparent;
+                        }
+
+                        #navbar nav ul .nav-link::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -2px;
+                            left: 50%;
+                            width: 0;
+                            height: 2px;
+                            background: currentColor;
+                            transition: all 0.3s ease;
+                        }
+                        #navbar nav ul .nav-link:hover::after {
+                            width: 100%;
+                            left: 0;
+                        }
+
+                        /* Estado al hacer scroll: fondo blanco, texto oscuro */
+                        #navbar.scrolled {
+                            background-color: rgba(255, 255, 255, 0.92);
+                            backdrop-filter: blur(10px);
+                            -webkit-backdrop-filter: blur(10px);
+                            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+                            border-bottom-color: var(--color-border-light);
+                        }
+
+                        #navbar.scrolled .logo-wrap {
+                            background-color: var(--color-brand-primary);
+                            color: white;
+                        }
+
+                        #navbar.scrolled .brand-text {
+                            color: var(--color-text-heading);
+                        }
+
+                        #navbar.scrolled nav .nav-link {
+                            color: var(--color-text-body);
+                        }
+                        #navbar.scrolled nav .nav-link:hover {
+                            color: var(--color-brand-primary);
+                        }
+
+                        /* Estilos del menú móvil */
+                        #mobileMenu .nav-link {
+                            color: var(--color-text-heading);
+                        }
+                        #mobileMenu .nav-link:hover {
+                            color: var(--color-brand-primary);
+                        }
+                        #mobileMenu .nav-link::after {
+                            display: none !important;
+                        }
+
+                        #navbar.scrolled .menu-btn {
+                            color: var(--color-brand-primary);
+                            background-color: rgba(144, 39, 39, 0.08);
+                        }
+
+                        #navbar.scrolled .social-icon {
+                            color: var(--color-brand-primary);
+                            background-color: var(--color-surface-muted);
+                        }
+
+                        #navbar.scrolled .cta-btn {
+                            color: #ffffff;
+                            border-color: var(--color-brand-primary);
+                            background-color: var(--color-brand-primary);
+                        }
+                        #navbar.scrolled .cta-btn:hover {
+                            background-color: var(--color-brand-hover);
+                            border-color: var(--color-brand-hover);
+                        }
+
+                        /* Animaciones para el menú móvil */
+                        .animate__animated {
+                            animation-duration: 0.3s;
+                        }
+
+                        #mobileMenu.animate__fadeIn,
+                        #mobileMenu.animate__fadeOut {
+                            animation-duration: 0.3s;
+                        }
+
+                        #mobileMenu {
+                            min-height: 100vh;
+                            height: 100vh;
+                            min-height: 100dvh;
+                            height: 100dvh;
+                        }
+                        /* En mobile, el navbar siempre se ve "scrolled" (fondo blanco, texto oscuro) */
+                        @media (max-width: 767px) {
+                            #navbar {
+                                background-color: rgba(255, 255, 255, 0.92);
+                                backdrop-filter: blur(10px);
+                                -webkit-backdrop-filter: blur(10px);
+                                box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+                                border-bottom-color: var(--color-border-light);
+                            }
+
+                            #navbar .logo-wrap {
+                                background-color: var(--color-brand-primary);
+                                color: white;
+                            }
+
+                            #navbar .brand-text {
+                                color: var(--color-text-heading);
+                            }
+
+                            #navbar nav .nav-link {
+                                color: var(--color-text-body);
+                            }
+
+                            #navbar .menu-btn {
+                                color: var(--color-brand-primary);
+                                background-color: rgba(144, 39, 39, 0.08);
+                            }
+
+                            #navbar .social-icon {
+                                color: var(--color-brand-primary);
+                                background-color: var(--color-surface-muted);
+                            }
+
+                            #navbar .cta-btn {
+                                color: #ffffff;
+                                border-color: var(--color-brand-primary);
+                                background-color: var(--color-brand-primary);
+                            }
+                        }
+                    </style>
+                </div>
+            </div>
         </div>
     </nav>
-
-    <!-- Mobile Menu -->
-    <div
-        id="mobileMenu"
-        class="hidden md:hidden fixed inset-0 bg-surface-light z-50 animate__animated"
-    >
-        <div class="flex flex-col h-full">
-            <div class="flex justify-between items-center p-5">
-                <span
-                    class="font-epilogue font-semibold text-brand-primary text-lg"
-                >
-                    Habilitaciones MDP
-                </span>
-                <button
-                    id="closeMenu"
-                    class="flex items-center justify-center w-10 h-10 bg-brand-primary text-white rounded-full transition-colors"
-                    aria-label="Cerrar menú"
-                >
-                    <svg
-                        class="w-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <ul
-                class="flex flex-col items-center justify-center flex-1 gap-6 text-2xl -mt-10"
-            >
-                {
-                    navLinks.map((link) => (
-                        <li>
-                            <a
-                                href={link.href}
-                                class="nav-link px-4 py-2 font-epilogue font-medium text-text-heading hover:text-brand-primary transition-colors"
-                            >
-                                {link.label}
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
-
-            <div class="flex justify-center gap-4 pb-10">
-                <a
-                    href="https://www.instagram.com/habilitacionesmardelplata/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    class="flex items-center justify-center w-11 h-11 rounded-full bg-surface-muted text-brand-primary transition-all duration-300 hover:bg-instagram hover:text-white hover:scale-110"
-                >
-                    <i class="text-xl fa-brands fa-instagram"></i>
-                </a>
-                <a
-                    href="https://www.linkedin.com/company/habilitaciones-mar-del-plata/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    class="flex items-center justify-center w-11 h-11 rounded-full bg-surface-muted text-brand-primary transition-all duration-300 hover:bg-linkedin hover:text-white hover:scale-110"
-                >
-                    <i class="text-xl fa-brands fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 </header>
-
-<script>
-    const navbar = document.getElementById("navbar");
-    const menuButton = document.getElementById("menuButton");
-    const closeMenu = document.getElementById("closeMenu");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const mobileMenuLinks = mobileMenu?.querySelectorAll("a");
-
-    const SCROLL_THRESHOLD = 40;
-    let isMenuOpen = false;
-
-    // Cambia de transparente a blanca al hacer scroll
-    function updateNavbarState() {
-        if (window.scrollY > SCROLL_THRESHOLD) {
-            navbar?.classList.add("scrolled");
-        } else {
-            navbar?.classList.remove("scrolled");
-        }
-    }
-    updateNavbarState();
-    window.addEventListener("scroll", updateNavbarState, { passive: true });
-
-    // Ocultar al bajar / mostrar al subir (solo cuando el menú móvil está cerrado)
-    var prevScrollpos = window.scrollY;
-    window.addEventListener("scroll", function () {
-        if (isMenuOpen) return;
-
-        var currentScrollPos = window.scrollY;
-
-        if (prevScrollpos < currentScrollPos && currentScrollPos > 200) {
-            navbar?.classList.remove("animate__fadeInDown");
-            navbar?.classList.add("animate__fadeOutUp");
-        } else {
-            navbar?.classList.remove("animate__fadeOutUp");
-            navbar?.classList.add("animate__fadeInDown");
-        }
-        prevScrollpos = currentScrollPos;
-    });
-
-    function openMenu() {
-        isMenuOpen = true;
-        mobileMenu?.classList.remove("hidden", "animate__fadeOut");
-        mobileMenu?.classList.add("animate__fadeIn");
-        document.body.classList.add("overflow-hidden");
-        menuButton?.setAttribute("aria-expanded", "true");
-    }
-
-    function closeMenuAnimation() {
-        isMenuOpen = false;
-        mobileMenu?.classList.remove("animate__fadeIn");
-        mobileMenu?.classList.add("animate__fadeOut");
-        menuButton?.setAttribute("aria-expanded", "false");
-        document.body.classList.remove("overflow-hidden");
-
-        setTimeout(() => {
-            mobileMenu?.classList.add("hidden");
-            mobileMenu?.classList.remove("animate__fadeOut");
-        }, 300);
-    }
-
-    menuButton?.addEventListener("click", openMenu);
-    closeMenu?.addEventListener("click", closeMenuAnimation);
-
-    mobileMenuLinks?.forEach((link) => {
-        link.addEventListener("click", () => {
-            isMenuOpen = false;
-            document.body.classList.remove("overflow-hidden");
-            mobileMenu?.classList.add("hidden");
-            mobileMenu?.classList.remove("animate__fadeIn", "animate__fadeOut");
-            menuButton?.setAttribute("aria-expanded", "false");
-        });
-    });
-</script>
-
-<style is:global>
-    /* Estado por defecto: transparente, texto blanco */
-    #navbar {
-        background-color: transparent;
-        border-bottom: 1px solid transparent;
-        transition:
-            background-color 0.35s ease,
-            box-shadow 0.35s ease,
-            border-color 0.35s ease;
-    }
-
-    #navbar .logo-wrap {
-        background-color: white;
-        color: var(--color-brand-primary);
-    }
-
-    #navbar .brand-text,
-    #navbar nav .nav-link,
-    #navbar .menu-btn {
-        color: #ffffff;
-    }
-
-    #navbar .menu-btn {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-
-    #navbar .social-icon {
-        color: #ffffff;
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-
-    #navbar .cta-btn {
-        color: #ffffff;
-        border-color: rgba(255, 255, 255, 0.6);
-        background-color: transparent;
-    }
-
-    #navbar nav ul .nav-link::after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background: currentColor;
-        transition: all 0.3s ease;
-    }
-    #navbar nav ul .nav-link:hover::after {
-        width: 100%;
-        left: 0;
-    }
-
-    /* Estado al hacer scroll: fondo blanco, texto oscuro */
-    #navbar.scrolled {
-        background-color: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-        border-bottom-color: var(--color-border-light);
-    }
-
-    #navbar.scrolled .logo-wrap {
-        background-color: var(--color-brand-primary);
-        color: white;
-    }
-
-    #navbar.scrolled .brand-text {
-        color: var(--color-text-heading);
-    }
-
-    #navbar.scrolled nav .nav-link {
-        color: var(--color-text-body);
-    }
-    #navbar.scrolled nav .nav-link:hover {
-        color: var(--color-brand-primary);
-    }
-
-    /* Estilos del menú móvil */
-    #mobileMenu .nav-link {
-        color: var(--color-text-heading);
-    }
-    #mobileMenu .nav-link:hover {
-        color: var(--color-brand-primary);
-    }
-    #mobileMenu .nav-link::after {
-        display: none !important;
-    }
-
-    #navbar.scrolled .menu-btn {
-        color: var(--color-brand-primary);
-        background-color: rgba(144, 39, 39, 0.08);
-    }
-
-    #navbar.scrolled .social-icon {
-        color: var(--color-brand-primary);
-        background-color: var(--color-surface-muted);
-    }
-
-    #navbar.scrolled .cta-btn {
-        color: #ffffff;
-        border-color: var(--color-brand-primary);
-        background-color: var(--color-brand-primary);
-    }
-    #navbar.scrolled .cta-btn:hover {
-        background-color: var(--color-brand-hover);
-        border-color: var(--color-brand-hover);
-    }
-
-    /* Animaciones para el menú móvil */
-    .animate__animated {
-        animation-duration: 0.3s;
-    }
-
-    #mobileMenu.animate__fadeIn,
-    #mobileMenu.animate__fadeOut {
-        animation-duration: 0.3s;
-    }
-
-    #mobileMenu {
-        min-height: 100vh;
-        height: 100vh;
-    }
-</style>
